@@ -14,16 +14,18 @@
   margin: 0 auto;
   min-height: calc(100vh - 64px - 48px);
   max-width: 1600px;
-  background: #fff;
 }
 
-.ant-layout,
+.ant-layout {
+  background: rgb(239, 239, 239);
+}
+
 .ant-layout-footer {
   background: none;
 }
 
-
-/* only for dev */
-.react-grid-item{
-  border: 1px dotted red;
+.react-grid-item {
+  display: grid;
+  /* only for dev */
+  /* border: 1px dotted red; */
 }

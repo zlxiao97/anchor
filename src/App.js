@@ -15,7 +15,7 @@ export default (props) => {
           <div className="logo" />
           <Menu />
         </Header>
-        <Content style={{ padding: "0 50px" }}>
+        <Content>
           <div className="site-layout-content">
             <Outlet />
           </div>

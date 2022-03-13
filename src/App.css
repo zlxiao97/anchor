@@ -1,4 +1,6 @@
 @import "~antd/dist/antd.css";
+@import "~react-grid-layout/css/styles.css";
+@import "~react-resizable/css/styles.css";
 
 .logo {
   float: left;
@@ -9,12 +11,19 @@
 }
 
 .site-layout-content {
+  margin: 0 auto;
   min-height: calc(100vh - 64px - 48px);
-  padding: 24px;
+  max-width: 1600px;
   background: #fff;
 }
 
 .ant-layout,
 .ant-layout-footer {
   background: none;
+}
+
+
+/* only for dev */
+.react-grid-item{
+  border: 1px dotted red;
 }

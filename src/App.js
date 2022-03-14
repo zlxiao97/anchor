@@ -1,13 +1,18 @@
 import { Layout } from "antd";
-import { Navigate, Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Menu from "./layout/Menu";
 import "./App.css";
 import Footer from "./layout/Footer";
 import { homePath } from "./config/routes";
+import { useEffect } from "react";
 
 const { Header, Content } = Layout;
 
 export default (props) => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate(homePath, { replace: true });
+  }, []);
   return (
     <>
       <Layout>
@@ -15,14 +20,13 @@ export default (props) => {
           <div className="logo" />
           <Menu />
         </Header>
-        <Content style={{ padding: "0 50px" }}>
+        <Content>
           <div className="site-layout-content">
             <Outlet />
           </div>
         </Content>
         <Footer />
       </Layout>
-      <Navigate replace to={homePath} />
     </>
   );
 };

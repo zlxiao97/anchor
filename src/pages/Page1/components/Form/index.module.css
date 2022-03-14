@@ -1,0 +1,32 @@
+.form {
+  max-width: 40%;
+  margin: 0 auto !important;
+}
+
+.form :global(.ant-form-item-label) label {
+  color: white;
+  font-weight: bolder;
+}
+.form :global(.ant-input-affix-wrapper) {
+  line-height: 2;
+  border-radius: 10px;
+}
+
+.form :global(.ant-row) {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  border: none !important;
+  width: 100%;
+  height: 3rem !important;
+  border-radius: 10px !important;
+  font-size: 1.2rem !important;
+  font-weight: bolder !important;
+  background-color: rgb(203, 253, 21) !important;
+}
+
+.btn span {
+  display: inline-block;
+  vertical-align: text-bottom;
+}

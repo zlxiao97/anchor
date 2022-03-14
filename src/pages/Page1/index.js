@@ -1,3 +1,19 @@
+import ModuleContainer from "../../components/ModuleContainer";
+import PageLayout from "../../layout/PageLayout";
+import Form from "./components/Form";
+import layout from "./config/layout";
+import styles from './index.module.css'
+
 export default () => {
-  return <h1>page1</h1>;
+  return (
+    <>
+      <PageLayout layout={layout}>
+        <div key="m1">
+          <ModuleContainer className={styles.module}>
+            <Form />
+          </ModuleContainer>
+        </div>
+      </PageLayout>
+    </>
+  );
 };

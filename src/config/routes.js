@@ -1,11 +1,12 @@
-export const homePath = '/dashboard'
+export const homePath = '/page1'
 
 export default [
-  {
-    name: "Dashboard",
-    path: "dashboard",
-    component: require("../pages/Dashboard").default
-  },
+  // Dashboard 仅为 demo
+  // {
+  //   name: "Dashboard",
+  //   path: "dashboard",
+  //   component: require("../pages/Dashboard").default
+  // },
   {
     name: "Page1",
     path: "page1",

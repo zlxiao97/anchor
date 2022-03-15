@@ -1,4 +1,4 @@
-export const homePath = '/page1'
+export const homePath = '/ido'
 
 export default [
   // Dashboard 仅为 demo
@@ -8,8 +8,8 @@ export default [
   //   component: require("../pages/Dashboard").default
   // },
   {
-    name: "Page1",
-    path: "page1",
-    component: require("../pages/Page1").default
+    name: "IDO",
+    path: "ido",
+    component: require("../pages/IDO").default
   }
 ];

@@ -1,6 +1,6 @@
 import ModuleContainer from "../../components/ModuleContainer";
 import PageLayout from "../../layout/PageLayout";
-import Form from "./components/Form";
+import Form from "./modules/Form";
 import layout from "./config/layout";
 import styles from './index.module.css'
 

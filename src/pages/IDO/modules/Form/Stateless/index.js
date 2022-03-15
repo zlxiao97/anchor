@@ -1,33 +1,36 @@
-import { Button, Form, Input } from "antd";
+import { Button, Form } from "antd";
 import styles from "./index.module.css";
-import usdt from "../../../../assets/icon-usdt.png";
-import one from "../../../../assets/icon-one.png";
-import Currency from "../../../../components/Currency";
+import usdt from "../../../../../assets/icon-usdt.png";
+import one from "../../../../../assets/icon-one.png";
+import Currency from "../../../../../components/Currency";
+import AmountInput from "../../../../../components/AmountInput";
 
-export default () => {
-  const onFinish = (values) => {
-    console.log("Received values of form: ", values);
-  };
-  const handleJoinBtnClick = () => {
-    console.log("join button was clicked");
+export default ({
+  isValid,
+  form,
+  onFinish,
+  handleJoinBtnClick,
+  onValuesChange
+}) => {
+  const formProps = {
+    form,
+    className: styles.form,
+    layout: "vertical",
+    onValuesChange,
+    onFinish
   };
   return (
     <div className={styles.wrap}>
-      <Form className={styles.form} layout="vertical" onFinish={onFinish}>
+      <Form {...formProps}>
         <Form.Item label="From" name="from">
-          <Input
-            autocomplete="off"
-            prefix={<Currency imageSrc={usdt} text="USDT" />}
-          />
+          <AmountInput prefix={<Currency imageSrc={usdt} text="USDT" />} />
         </Form.Item>
         <Form.Item label="To" name="to">
-          <Input
-            autocomplete="off"
-            prefix={<Currency imageSrc={one} text="ONE" />}
-          />
+          <AmountInput prefix={<Currency imageSrc={one} text="ONE" />} />
         </Form.Item>
         <Form.Item>
           <Button
+            disabled={!isValid}
             htmlType="submit"
             className={styles.btn}
             style={{

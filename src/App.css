@@ -49,6 +49,11 @@
     Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
+/* 去掉默认 button focus 样式 */
+.ant-btn:focus {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
 hr {
   padding: 0px;
   margin: 80px 0px 40px;

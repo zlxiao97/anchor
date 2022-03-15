@@ -1,5 +1,5 @@
 .form {
-  max-width: 40%;
+  max-width: 80%;
   margin: 0 auto !important;
 }
 
@@ -23,7 +23,12 @@
   border-radius: 10px !important;
   font-size: 1.2rem !important;
   font-weight: bolder !important;
-  background-color: rgb(203, 253, 21) !important;
+  background-color: rgba(203, 253, 21, 0.95) !important;
+}
+
+.btn:not([disabled]):hover {
+  color: rgba(0, 0, 0, 0.85) !important;
+  background-color: rgba(203, 253, 21) !important;
 }
 
 .btn span {

@@ -4,7 +4,8 @@
 }
 
 .form :global(.ant-form-item-label) label {
-  color: white;
+  /* color: white; */
+  color: rgba(0, 0, 0, 0.85);
   font-weight: bolder;
 }
 .form :global(.ant-input-affix-wrapper) {
@@ -23,12 +24,15 @@
   border-radius: 10px !important;
   font-size: 1.2rem !important;
   font-weight: bolder !important;
-  background-color: rgba(203, 253, 21, 0.95) !important;
+  /* background-color: rgba(203, 253, 21, 0.95) !important; */
+  background-color: rgb(44, 44, 44) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .btn:not([disabled]):hover {
-  color: rgba(0, 0, 0, 0.85) !important;
-  background-color: rgba(203, 253, 21) !important;
+  /* color: rgba(0, 0, 0, 0.85) !important; */
+  /* background-color: rgba(203, 253, 21) !important; */
+  background-color: rgba(28, 28, 28) !important;
 }
 
 .btn span {

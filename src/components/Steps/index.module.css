@@ -1,0 +1,31 @@
+.steps {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.title {
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+}
+
+.no {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: #dde0e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #1a2328;
+  margin-right: 0.75rem;
+  text-align: center;
+  line-height: 1.75rem;
+}
+
+.desc {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  color: #5e6d82;
+  line-height: 1.25rem;
+}

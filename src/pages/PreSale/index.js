@@ -2,14 +2,20 @@ import ModuleContainer from "../../components/ModuleContainer";
 import PageLayout from "../../layout/PageLayout";
 import Form from "./modules/Form";
 import layout from "./config/layout";
-import styles from './index.module.css'
+import Introduce from "./modules/Introduce";
+import styles from "./index.module.css";
 
 export default () => {
   return (
     <>
       <PageLayout layout={layout}>
         <div key="m1">
-          <ModuleContainer className={styles.module}>
+          <ModuleContainer>
+            <Introduce />
+          </ModuleContainer>
+        </div>
+        <div key="m2">
+          <ModuleContainer>
             <Form />
           </ModuleContainer>
         </div>

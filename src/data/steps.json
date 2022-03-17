@@ -1,0 +1,14 @@
+[
+  {
+    "title": "连接钱包 ",
+    "desc": "通过右上角的Connect Wallet按钮，连接你的钱包地址"
+  },
+  {
+    "title": "授权平台交易权限 ",
+    "desc": "点击Approve（授权）按钮，使平台获得钱包交易权限"
+  },
+  {
+    "title": "加入META",
+    "desc": "在USDT栏内填入使用USDT的数量，META栏内会自动显示获得数量。点击JOIN PreSale，会接受弹出的手续费页面，确认即可完成购买"
+  }
+]

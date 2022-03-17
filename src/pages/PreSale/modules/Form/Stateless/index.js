@@ -26,7 +26,10 @@ export default ({
           <AmountInput prefix={<Currency imageSrc={usdt} text="USDT" />} />
         </Form.Item>
         <Form.Item label="To" name="to">
-          <AmountInput prefix={<Currency imageSrc={one} text="ONE" />} />
+          <AmountInput
+            prefix={<Currency imageSrc={one} text="META" />}
+            disabled={true}
+          />
         </Form.Item>
         <Form.Item>
           <Button
@@ -48,7 +51,7 @@ export default ({
               marginTop: "10%"
             }}
           >
-            Join IDO
+            Join PreSale
           </Button>
         </Form.Item>
       </Form>

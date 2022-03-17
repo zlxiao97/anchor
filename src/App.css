@@ -51,7 +51,7 @@
 
 /* 去掉默认 button focus 样式 */
 .ant-btn:focus {
-  color: rgba(0, 0, 0, 0.85) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 hr {

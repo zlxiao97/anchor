@@ -17,7 +17,7 @@ export default (props) => {
     <>
       <Layout>
         <Header>
-          <div className="logo" />
+          {/* <div className="logo" /> */}
           <Menu />
         </Header>
         <Content>

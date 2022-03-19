@@ -1,4 +1,5 @@
-import styles from './index.module.css'
+import styles from "./index.module.css";
+import { v4 as uuidv4 } from "uuid";
 
 export const Step = ({ no, title, desc }) => {
   return (
@@ -15,7 +16,7 @@ export const Step = ({ no, title, desc }) => {
 export default ({ steps }) => (
   <div className={styles.steps}>
     {steps.map((step, index) => (
-      <Step {...step} no={index + 1} />
+      <Step {...step} key={uuidv4()} no={index + 1} />
     ))}
   </div>
 );

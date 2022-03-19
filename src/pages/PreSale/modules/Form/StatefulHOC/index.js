@@ -13,7 +13,7 @@ export default (Stateless) => (props) => {
    * 用户点击 Approve 按钮
    * @param  {Object} values 表单数据
    */
-  const approve = (values) => {
+  const approve = async (values) => {
     console.log("Current Address: ", address);
     console.log("Web3 Provider: ", provider);
     console.log("Received values of form: ", values);
@@ -22,10 +22,9 @@ export default (Stateless) => (props) => {
   /**
    * 用户点击 Join PreSale 按钮
    */
-  const joinPresale = () => {
+  const joinPresale = async () => {
     console.log("join button was clicked");
   };
-
 
   const _onValuesChange = (vals) => {
     // 校验表单是否已填写完全
@@ -50,7 +49,7 @@ export default (Stateless) => (props) => {
   const callback = {
     onFinish: approve,
     handleJoinBtnClick: joinPresale,
-    onValuesChange:_onValuesChange
+    onValuesChange: _onValuesChange
   };
   return <Stateless {...props} {...states} {...callback} />;
 };

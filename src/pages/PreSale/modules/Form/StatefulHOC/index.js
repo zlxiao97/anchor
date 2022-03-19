@@ -9,15 +9,25 @@ export default (Stateless) => (props) => {
   const [form] = Form.useForm();
   const [isValid, setIsValid] = useState(false);
 
-  const onFinish = (values) => {
+  /**
+   * 用户点击 Approve 按钮
+   * @param  {Object} values 表单数据
+   */
+  const approve = (values) => {
     console.log("Current Address: ", address);
     console.log("Web3 Provider: ", provider);
     console.log("Received values of form: ", values);
   };
-  const handleJoinBtnClick = () => {
+
+  /**
+   * 用户点击 Join PreSale 按钮
+   */
+  const joinPresale = () => {
     console.log("join button was clicked");
   };
-  const onValuesChange = (vals) => {
+
+
+  const _onValuesChange = (vals) => {
     // 校验表单是否已填写完全
     const values = form.getFieldsValue();
     const isNotEmpty = (item) => item !== undefined && item !== ""; // 不认为 0 是空值
@@ -38,9 +48,9 @@ export default (Stateless) => (props) => {
     isValid
   };
   const callback = {
-    onFinish,
-    handleJoinBtnClick,
-    onValuesChange
+    onFinish: approve,
+    handleJoinBtnClick: joinPresale,
+    onValuesChange:_onValuesChange
   };
   return <Stateless {...props} {...states} {...callback} />;
 };

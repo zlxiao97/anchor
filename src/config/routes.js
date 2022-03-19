@@ -1,4 +1,4 @@
-export const homePath = '/preSale'
+export const homePath = "/connect";
 
 export default [
   // Dashboard 仅为 demo
@@ -7,6 +7,12 @@ export default [
   //   path: "dashboard",
   //   component: require("../pages/Dashboard").default
   // },
+  {
+    name: "connect",
+    path: "connect",
+    component: require("../vendors/pages/IDO").default,
+    hideInMenu: true
+  },
   {
     name: "PreSale",
     path: "preSale",

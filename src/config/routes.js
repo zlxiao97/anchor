@@ -17,5 +17,10 @@ export default [
     name: "PreSale",
     path: "preSale",
     component: require("../pages/PreSale").default
+  },
+  {
+    name: "Page2",
+    path: "page2",
+    component: require("../pages/Page2").default
   }
 ];

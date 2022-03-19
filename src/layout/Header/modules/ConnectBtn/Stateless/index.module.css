@@ -1,0 +1,17 @@
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active {
+  height: 26px;
+  border-radius: 20px;
+  padding: 0px 20px;
+  border-color: rgb(75, 219, 75);
+  background-color: transparent !important;
+}
+
+.btn > span {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgb(75, 219, 75);
+  line-height: 1 !important;
+}

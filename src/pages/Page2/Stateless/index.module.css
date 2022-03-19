@@ -1,0 +1,47 @@
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a2328;
+  margin-bottom: 2rem;
+}
+
+.l1 :global(.ant-statistic-title) {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.l1 :global(.ant-statistic) {
+  margin-bottom: 1.25rem;
+}
+
+.l1 :global(.ant-btn) {
+  background: #f5f5f5;
+  text-shadow: none;
+  box-shadow: none;
+  border: none !important;
+  width: 8rem;
+  height: 3rem !important;
+  border-radius: 10px !important;
+  font-size: 1.2rem !important;
+  font-weight: bolder !important;
+  background-color: rgb(44, 44, 44) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.l1 :global(.ant-col-12) {
+  display: flex;
+  justify-content: center;
+}
+
+.l2 :global(.ant-list-item) {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: bolder;
+}
+
+.l2 .module > div{
+  height: 100%;
+  align-items: center;
+}

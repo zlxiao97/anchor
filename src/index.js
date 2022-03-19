@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import "./polyfill";
 import Router from "./router";
 
 ReactDOM.render(<Router />, document.getElementById("root"));

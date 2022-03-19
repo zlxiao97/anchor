@@ -2,12 +2,16 @@ import { Form } from "antd";
 import { get } from "lodash";
 import { useState } from "react";
 import { USDT2META } from "../../../../../config/config";
+import { useWeb3Context } from "../../../../../vendors/hooks/web3-context";
 
 export default (Stateless) => (props) => {
+  const { address, provider } = useWeb3Context();
   const [form] = Form.useForm();
   const [isValid, setIsValid] = useState(false);
 
   const onFinish = (values) => {
+    console.log("Current Address: ", address);
+    console.log("Web3 Provider: ", provider);
     console.log("Received values of form: ", values);
   };
   const handleJoinBtnClick = () => {

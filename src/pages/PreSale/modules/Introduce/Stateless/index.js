@@ -1,13 +1,13 @@
 import Steps from "../../../../../components/Steps";
+import steps from "../../../../../data/preSale/steps.json";
+import introduce from "../../../../../data/preSale/introduce.json";
 import styles from "./index.module.css";
 
-export default ({ steps }) => {
+export default () => {
   return (
     <>
-      <h1 className={styles.title}>META</h1>
-      <p className={styles.desc}>
-        Use your USDT to buy more META and enjoy your game.
-      </p>
+      <h1 className={styles.title}>{introduce.title}</h1>
+      <p className={styles.desc}>{introduce.description}</p>
       <Steps steps={steps} />
     </>
   );

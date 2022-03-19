@@ -1,9 +1,10 @@
 import { Button, Form } from "antd";
 import styles from "./index.module.css";
-import usdt from "../../../../../assets/icon-usdt.png";
-import one from "../../../../../assets/icon-one.png";
 import Currency from "../../../../../components/Currency";
 import AmountInput from "../../../../../components/AmountInput";
+import button from "../../../../../data/preSale/button.json";
+import currency from "../../../../../data/preSale/currency";
+import { get } from "lodash";
 
 export default ({
   isValid,
@@ -23,11 +24,23 @@ export default ({
     <div className={styles.wrap}>
       <Form {...formProps}>
         <Form.Item label="From" name="from">
-          <AmountInput prefix={<Currency imageSrc={usdt} text="USDT" />} />
+          <AmountInput
+            prefix={
+              <Currency
+                imageSrc={get(currency, "from.icon")}
+                text={get(currency, "from.text")}
+              />
+            }
+          />
         </Form.Item>
         <Form.Item label="To" name="to">
           <AmountInput
-            prefix={<Currency imageSrc={one} text="META" />}
+            prefix={
+              <Currency
+                imageSrc={get(currency, "to.icon")}
+                text={get(currency, "to.text")}
+              />
+            }
             disabled={true}
           />
         </Form.Item>
@@ -40,7 +53,7 @@ export default ({
               marginTop: "3%"
             }}
           >
-            Approve
+            {button.approve}
           </Button>
         </Form.Item>
         <Form.Item>
@@ -51,7 +64,7 @@ export default ({
               marginTop: "10%"
             }}
           >
-            Join PreSale
+            {button.join}
           </Button>
         </Form.Item>
       </Form>

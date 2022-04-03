@@ -73,6 +73,7 @@
     ]
   },
   "devDependencies": {
+    "craco-plugin-style-resources-loader": "^0.0.3",
     "react-app-rewired": "^2.2.1"
   }
 }

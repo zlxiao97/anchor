@@ -1,9 +1,15 @@
-@import "@/theme/main.less";
-
 .logo {
+  display: flex;
   float: left;
-  width: 120px;
-  height: @height-base;
-  margin: @margin-md @margin-lg @margin-md 0;
-  background: @gray-base
+  width: 150px;
+  height: 100%;
+  margin-right: calc(@margin-lg * 3);
+  align-items: center;
+  &__img {
+    width: 100%;
+    height: @height-lg;
+    background: url("../../assets//logo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 }

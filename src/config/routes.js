@@ -13,6 +13,11 @@ export default [
     component: require("../pages/Home").default
   },
   {
+    name: "DATA",
+    path: "data",
+    component: require("../pages/Data").default
+  },
+  {
     name: "PreSale",
     path: "preSale",
     component: require("../pages/PreSale").default

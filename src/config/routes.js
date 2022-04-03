@@ -1,4 +1,4 @@
-export const homePath = "/preSale";
+export const homePath = "/home";
 
 export default [
   // {
@@ -7,6 +7,11 @@ export default [
   //   component: require("../vendors/pages/IDO").default,
   //   hideInMenu: true
   // },
+  {
+    name: "HOME",
+    path: "home",
+    component: require("../pages/Home").default
+  },
   {
     name: "PreSale",
     path: "preSale",

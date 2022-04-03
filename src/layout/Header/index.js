@@ -8,9 +8,9 @@ const { Header } = Layout;
 export default () => {
   return (
     <Header>
-      {/* <Logo /> */}
       <Row>
-        <Col span={20}>
+        <Col offset={3} span={17}>
+          <Logo />
           <Menu />
         </Col>
         <Col span={4}>

@@ -1,0 +1,35 @@
+@import "@/theme/main.less";
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  row-gap: @margin-lg;
+}
+
+.step {
+  &__title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+  }
+
+  &__no {
+    display: block;
+    width: calc(@font-size-lg * @line-height-base);
+    height: calc(@font-size-lg * @line-height-base);
+    margin-right: @margin-sm;
+    font-size: @font-size-lg;
+    color: @black;
+    text-align: center;
+    line-height: @line-height-base;
+    background: @normal-color;
+    border-radius: 5px;
+  }
+
+  &__desc {
+    margin-top: @margin-md;
+    font-size: @font-size-lg;
+    color: @gray-8;
+    line-height: @line-height-base;
+  }
+}

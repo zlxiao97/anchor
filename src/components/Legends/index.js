@@ -1,11 +1,11 @@
 import { Statistic } from "antd";
 import { get } from "lodash";
-import styles from "./index.module.css";
+import styles from "./index.module.less";
 
 const Square = (props) => {
   return (
     <i
-      className={styles.square}
+      className={styles.legends__square}
       style={{
         backgroundColor: get(props, "color", "#000")
       }}
@@ -13,11 +13,9 @@ const Square = (props) => {
   );
 };
 
-
-
 export default (props) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.legends}>
       {get(props, "data", []).map((item) => {
         const { title, color, value } = item;
         return (

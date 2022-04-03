@@ -1,6 +1,6 @@
 import { Input } from "antd";
 import { get } from "lodash";
-import { isAmount } from "../../utils/utils";
+import { isAmount } from "@/utils/utils";
 
 export default (props) => {
   const onChange = (e) => {

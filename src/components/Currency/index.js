@@ -1,10 +1,10 @@
-import styles from "./index.module.css";
+import styles from "./index.module.less";
 
 export default (props) => {
   return (
-    <div className={styles.container}>
-      <img className={styles.img} src={props.imageSrc} alt="BigONE Token" />
-      <p className={styles.text}>{props.text}</p>
+    <div className={styles.currency}>
+      <img className={styles.currency__img} src={props.imageSrc} alt="BigONE Token" />
+      <p className={styles.currency__text}>{props.text}</p>
     </div>
   );
 };

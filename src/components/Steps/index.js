@@ -1,14 +1,14 @@
-import styles from "./index.module.css";
+import styles from "./index.module.less";
 import { v4 as uuidv4 } from "uuid";
 
 export const Step = ({ no, title, desc }) => {
   return (
-    <div>
-      <h2 className={styles.title}>
-        <span className={styles.no}>{no}</span>
+    <div className={styles.step}>
+      <h2 className={styles.step__title}>
+        <span className={styles.step__no}>{no}</span>
         <span>{title}</span>
       </h2>
-      <p className={styles.desc}>{desc}</p>
+      <p className={styles.step__desc}>{desc}</p>
     </div>
   );
 };

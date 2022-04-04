@@ -12,13 +12,10 @@ export default () => {
           <img src={m3Image} />
         </Col>
         <Col span={8}>
-          <Title level={2}>Customize your own wallet and currency</Title>
+          <Title level={2}>Hold to Earn</Title>
           <Title level={4}>
-            Zero Coding Launch Platform for Entrepreneurs and Impact Leaders.
-          </Title>
-          <Title level={5}>
-            ◆ Mint your own token in minutes. <br />◆ Activate fiat on ramps.{" "}
-            <br />◆ Grow your user base with powerful tools and plugins.
+          A limited NFT collection of spacecrafts where the token itself  will carry you to metaspace to get find more treasure in the futrure.
+Get it by Mystrey box at same cost to get different level of our spacecrafts.
           </Title>
           <Row gutter={41} className={styles.btns}>
             <Col span={13}>

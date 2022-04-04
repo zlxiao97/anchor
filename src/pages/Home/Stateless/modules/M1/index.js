@@ -9,10 +9,9 @@ export default () => {
     <div className={styles.container} >
       <Row gutter={55}>
         <Col offset={4} span={8}>
-          <Title>Infrastructure for Open Source Money</Title>
+          <Title>Play to Earn</Title>
           <Title level={3}>
-            Launch community-centric payment systems and token economies on an
-            Ethereum-compatible
+            Join our games to win the treasure that are eligible to fly the spacecraft to metapsace, with prizes that multiply every day. There will be a round of treasure hunting activities every 3 minutes so don't miss your chance to multiply your fun!
           </Title>
           <Row gutter={41} className={styles.btns}>
             <Col span={13}>
@@ -26,9 +25,6 @@ export default () => {
               </Button>
             </Col>
           </Row>
-        </Col>
-        <Col span={8}>
-          <img src={m1Image} />
         </Col>
       </Row>
     </div>

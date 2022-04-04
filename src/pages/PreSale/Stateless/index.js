@@ -3,11 +3,12 @@ import PageLayout from "@/components/PageLayout";
 import Form from "@/modules/Form";
 import Introduce from "@/modules/Introduce";
 import layouts from "./config/layouts";
+import styles from './index.module.less';
 
-export default () => {
+export default (props) => {
   return (
     <>
-      <PageLayout layouts={layouts}>
+      <PageLayout layouts={layouts} className={styles.layout} >
         <div key="m1">
           <ModuleContainer>
             <Introduce />
@@ -15,7 +16,7 @@ export default () => {
         </div>
         <div key="m2">
           <ModuleContainer>
-            <Form />
+            <Form {...props} />
           </ModuleContainer>
         </div>
       </PageLayout>

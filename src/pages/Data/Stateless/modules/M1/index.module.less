@@ -11,6 +11,15 @@
     margin-top: @margin-lg;
   }
 
+  &__img {
+    cursor: pointer;
+    pointer-events: all !important;
+  }
+
+  &__img-select {
+    border: 1px solid @primary-color;
+  }
+
   &__btns {
     display: flex;
     column-gap: calc(@margin-lg * 2);
@@ -21,7 +30,7 @@
 
 .content {
   margin-left: 6.3%;
-  margin-top: calc(@margin-lg * 2);
+  margin-top: calc(@margin-lg * 6);
 
   :global {
     .ant-statistic-content,

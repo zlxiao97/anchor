@@ -4,12 +4,15 @@
 
 .brands {
   margin-top: calc(@margin-lg * 2.92);
+  padding: 0 calc(@padding-lg * 8);
   &__item {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(@height-lg * 3.75);
-    border: 1px solid @gray-3;
+    height: calc(@height-lg * 2);
+    // border: 1px solid @gray-3;
+    background-color: @white;
+    border-radius: calc(@border-radius-base * 5);
   }
 }

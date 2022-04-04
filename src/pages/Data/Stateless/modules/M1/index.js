@@ -13,13 +13,14 @@ import number9Image from "@/assets/number9.png";
 import clockIcon from "@/assets/icon-clock.png";
 import IncomeIcon from "@/assets/icon-income.png";
 import styles from "./index.module.less";
+import classNames from "classnames";
 
 const { Title } = Typography;
 const { Countdown } = Statistic;
 
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
 
-export default () => {
+export default (props) => {
   return (
     <>
       <div className={styles.content}>
@@ -31,7 +32,7 @@ export default () => {
         <div className={styles.content__value}>
           <Statistic title="数量" value={100} />
           <Statistic title="APY" value={1000} precision={2} />
-          <Button type="large" shape="round" className={styles.btn}>
+          <Button type="large" shape="round" className={styles.btn} onClick={props.onBtnLeftClick}>
             TEMPLATE
           </Button>
         </div>
@@ -44,43 +45,43 @@ export default () => {
         </Row>
         <div className={styles.numbers__content}>
           <Row gutter={[32, 32]}>
-            <Col offset={2} span={4}>
-              <img src={number0Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number1Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number2Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number3Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number4Image} />
-            </Col>
-            <Col offset={2} span={4}>
-              <img src={number5Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number6Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number7Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number8Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number9Image} />
-            </Col>
+            {[
+              number0Image,
+              number1Image,
+              number2Image,
+              number3Image,
+              number4Image,
+              number5Image,
+              number6Image,
+              number7Image,
+              number8Image,
+              number9Image
+            ].map((img, index) => (
+              <Col offset={index % 5 === 0 ? 2 : 0} span={4}>
+                <img
+                  onClick={() => props.onSelectNumber(index)}
+                  className={classNames(styles.numbers__img, {
+                    [styles["numbers__img-select"]]: props.selected === index
+                  })}
+                  src={img}
+                />
+              </Col>
+            ))}
           </Row>
         </div>
         <div className={styles.numbers__btns}>
-          <Button shape="round" className={styles.btn}>
+          <Button
+            shape="round"
+            className={styles.btn}
+            onClick={props.onBtn1Click}
+          >
             TEMPLATE
           </Button>
-          <Button shape="round" className={styles.btn}>
+          <Button
+            shape="round"
+            className={styles.btn}
+            onClick={props.onBtn2Click}
+          >
             TEMPLATE
           </Button>
         </div>

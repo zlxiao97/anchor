@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { Responsive, WidthProvider } from "react-grid-layout";
 import styles from "./index.module.less";
 
@@ -5,7 +6,7 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 
 export default (props) => {
   const defaultProps = {
-    className: styles.layout,
+    className: classNames(styles.layout, props.className),
     isDraggable: false,
     isResizable: false,
     width: { lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 },

@@ -1,0 +1,24 @@
+.currency {
+  display: flex;
+  align-items: center;
+  padding-right: @padding-md;
+  margin-right: @margin-md;
+  border-right: calc(@border-width-base * 2) solid;
+  border-radius: @border-radius-base;
+  border-color: @border-color-split;
+
+  &__img {
+    width: calc(@font-size-base * 2);
+    height: calc(@font-size-base * 2);
+    margin-right: @margin-sm;
+    border-radius: 50%;
+  }
+
+  &__text {
+    margin: 0px;
+    color: @text-color;
+    font-size: @font-size-base;
+    font-weight: 500;
+    line-height: @line-height-base;
+  }
+}

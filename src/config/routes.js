@@ -1,12 +1,6 @@
-export const homePath = "/preSale";
+export const homePath = "/home";
 
 export default [
-  // Dashboard 仅为 demo
-  // {
-  //   name: "Dashboard",
-  //   path: "dashboard",
-  //   component: require("../pages/Dashboard").default
-  // },
   // {
   //   name: "connect",
   //   path: "connect",
@@ -14,13 +8,23 @@ export default [
   //   hideInMenu: true
   // },
   {
+    name: "HOME",
+    path: "home",
+    component: require("../pages/Home").default
+  },
+  {
+    name: "DATA",
+    path: "data",
+    component: require("../pages/Data").default
+  },
+  {
     name: "PreSale",
     path: "preSale",
     component: require("../pages/PreSale").default
   },
-  {
-    name: "Page2",
-    path: "page2",
-    component: require("../pages/Page2").default
-  }
+  // {
+  //   name: "Page2",
+  //   path: "page2",
+  //   component: require("../pages/Page2").default
+  // }
 ];

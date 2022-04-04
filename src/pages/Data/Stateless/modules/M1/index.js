@@ -31,6 +31,9 @@ export default () => {
         <div className={styles.content__value}>
           <Statistic title="数量" value={100} />
           <Statistic title="APY" value={1000} precision={2} />
+          <Button type="large" shape="round" className={styles.btn}>
+            TEMPLATE
+          </Button>
         </div>
       </div>
       <div className={styles.numbers}>

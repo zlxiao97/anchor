@@ -15,14 +15,13 @@
     display: flex;
     column-gap: calc(@margin-lg * 2);
     justify-content: flex-end;
-    margin-top: calc(@margin-lg * 1.5);
     margin-right: calc(@margin-lg * 4);
   }
 }
 
 .content {
   margin-left: 6.3%;
-  margin-top: calc(@margin-lg * 4);
+  margin-top: calc(@margin-lg * 2);
 
   :global {
     .ant-statistic-content,
@@ -37,8 +36,9 @@
 }
 
 .btn {
-  width: 17% !important;
+  margin-top: calc(@margin-lg * 1.2);
+  padding: @padding-xs calc(@padding-lg * 2) !important;
   color: @geekblue-6 !important;
-  font-size: @font-size-lg !important;
+  // font-size: @font-size-lg !important;
   border-color: @geekblue-6 !important;
 }

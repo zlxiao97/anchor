@@ -1,6 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useWeb3Context } from "@/vendors/hooks/web3-context";
 
 export default (Stateless) => (props) => {
+  const {
+    connect,
+    disconnect,
+    hasCachedProvider,
+    provider,
+    connected,
+    address,
+    chainID,
+    web3Modal,
+    providerChainID
+  } = useWeb3Context();
   const [selected, setSelected] = useState();
 
   /**
@@ -27,6 +39,17 @@ export default (Stateless) => (props) => {
   const onBtnLeftClick = () => {
     console.log("onBtnLeftClick");
   };
+
+  /**
+   * 页面初始化
+   */
+  const init = async () => {
+    console.log("init");
+  };
+
+  useEffect(() => {
+    init();
+  }, []);
 
   const callback = {
     onBtn1Click,

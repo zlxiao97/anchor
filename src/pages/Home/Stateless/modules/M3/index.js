@@ -20,7 +20,7 @@ Get it by Mystrey box at same cost to get different level of our spacecrafts.
           <Row gutter={41} className={styles.btns}>
             <Col span={13}>
               <Button size="large" type="primary" className={styles.btn}>
-                Launch Community
+                Get NFT
               </Button>
             </Col>
             <Col span={11}></Col>

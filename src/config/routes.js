@@ -13,7 +13,7 @@ export default [
     component: require("../pages/Home").default
   },
   {
-    name: "DATA",
+    name: "Hunt",
     path: "data",
     component: require("../pages/Data").default
   },
@@ -21,6 +21,11 @@ export default [
     name: "PreSale",
     path: "preSale",
     component: require("../pages/PreSale").default
+  },
+  {
+    name: "SpaceShip NFT",
+    path: "",
+    component: require("../pages/Home").default // todo 让这个按钮不能被点击
   },
   // {
   //   name: "Page2",

@@ -4,6 +4,8 @@ import styles from "./index.module.less";
 
 const { Title } = Typography;
 
+
+// todo White Paper按钮点后显示一个pdf
 export default () => {
   return (
     <div className={styles.container} >
@@ -15,13 +17,13 @@ export default () => {
           </Title>
           <Row gutter={41} className={styles.btns}>
             <Col span={13}>
-              <Button size="large" type="primary" className={styles.btn}>
-                Launch Community
+              <Button size="large" type="primary" className={styles.btn}> 
+                White Paper 
               </Button>
             </Col>
             <Col span={11}>
               <Button size="large" ghost className={styles.btn}>
-                Stake Fuse
+                Play
               </Button>
             </Col>
           </Row>

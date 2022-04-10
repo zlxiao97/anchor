@@ -8,7 +8,6 @@ import m66Image from "@/assets/m66.png";
 import styles from "./index.module.less";
 
 const { Title } = Typography;
-// todo Join our growing ecos 居中显示，上面有个大号的title Partners，类似于https://voltage.finance/index.html
 export default () => {
   return (
     <div className={styles.container}>

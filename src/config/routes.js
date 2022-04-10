@@ -25,7 +25,7 @@ export default [
     component: require("../pages/Data").default
   },
   {
-    name: "NFT", // todo 点击后弹框显示 coming soon
+    name: "NFT", 
     path: "nft",
     onClick: () => {
       message.info("coming soon");

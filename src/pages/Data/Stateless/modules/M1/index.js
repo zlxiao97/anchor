@@ -20,9 +20,7 @@ const { Title } = Typography;
 const { Countdown } = Statistic;
 
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
-
-// todo  数字再小一号显示
-
+// todo 去掉ETH等后面的冒号
 export default (props) => {
   return (
     <>
@@ -33,10 +31,10 @@ export default (props) => {
         </div> */}
         <IconTitle title="Earn:" />
         <div className={styles.content__value}>
-          <Statistic layout="horizontal" title="ETH" value={1} precision={4} />
-          <Statistic layout="horizontal" title="BNB" value={1} precision={4} />
-          <Statistic layout="horizontal" title="USDT" value={1} precision={4} />
-          <Statistic layout="horizontal" title="DOGE" value={1} precision={4} />
+          <Statistic layout="horizontal" title="ETH" value={0} precision={4} />
+          <Statistic layout="horizontal" title="BNB" value={0} precision={4} />
+          <Statistic layout="horizontal" title="USDT" value={0} precision={4} />
+          <Statistic layout="horizontal" title="DOGE" value={0} precision={4} />
           <Button
             type="large"
             shape="round"
@@ -50,7 +48,7 @@ export default (props) => {
       <div className={styles.numbers}>
         <Row gutter={[32, 32]}>
           <Col offset={2} span={22}>
-            <Title level={5}>From 0 to 9 </Title>
+            <Title level={5}>Select a Number to Open Mystery Box </Title>
           </Col>
         </Row>
         <div className={styles.numbers__content}>

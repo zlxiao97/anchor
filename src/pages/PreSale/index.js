@@ -5,9 +5,6 @@ import Stateless from "./Stateless";
 import PresaleJson from "../../artifacts/contracts/IDO.sol/ONESale.json";
 import UsdtJson from "../../artifacts/contracts/online/USDT.json";
 
-// todo 1.给所有页面的js加入连接钱包后的wallet  2.增加对应button的函数 3.函数需要是异步的
-// 4.每个页面有个init函数
-
 const USDT_largeapproval = "100000000000000000000000000000000";
 const IDO_ADDRESS = "0x47B00a422678130337A02675B4d2B0EAe6935CE5";
 const USDT_ADDRESS = "0x55d398326f99059fF775485246999027B3197955";

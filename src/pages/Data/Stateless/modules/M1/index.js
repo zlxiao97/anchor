@@ -21,7 +21,7 @@ const { Countdown } = Statistic;
 
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
 
-// todo  Earn字大一点， ETH 和数量放成一行，然后title左对齐，数量右对齐
+// todo  数字再小一号显示
 
 export default (props) => {
   return (

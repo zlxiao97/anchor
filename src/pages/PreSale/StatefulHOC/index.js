@@ -17,6 +17,7 @@ export default (Stateless) => (props) => {
     providerChainID
   } = useWeb3Context();
   const [isValid, onValuesChange] = useFormValidate(form);
+  // todo  approve是一直能点的，Join是输完之后才能点
   /**
    * 用户点击 Approve 按钮
    * @param  {Object} values 表单数据

@@ -4,7 +4,6 @@ import styles from "./index.module.less";
 
 const { Title } = Typography;
 
-// todo White Paper按钮点后显示一个pdf   点开Play按钮跳转到Play页面
 export default (props) => {
   return (
     <div className={styles.container}>

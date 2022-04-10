@@ -8,14 +8,14 @@ import m66Image from "@/assets/m66.png";
 import styles from "./index.module.less";
 
 const { Title } = Typography;
-
+// todo Join our growing ecos 居中显示，上面有个大号的title Partners，类似于https://voltage.finance/index.html
 export default () => {
   return (
     <div className={styles.container}>
       <Row>
         <Col offset={6} span={12}>
-          <Title level={3}>
-            Join our growing ecosystem of leading infrastructure partners,
+          <Title level={3}> 
+            Join our growing ecosystem of leading infrastructure partners, 
             liquidity platforms, data providers and more!
           </Title>
         </Col>

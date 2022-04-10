@@ -7,7 +7,7 @@ export default () => {
   return (
     <>
       <h1 className={styles.title}>{introduce.title}</h1>
-      <p className={styles.desc}>{introduce.description}</p>
+      {/* <p className={styles.desc}>{introduce.description}</p> */}
       <Steps steps={steps} />
     </>
   );

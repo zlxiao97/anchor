@@ -24,8 +24,8 @@ export default [
   },
   {
     name: "SpaceShip NFT",
-    path: "home",
-    component: require("../pages/Home").default // todo 让这个按钮不能被点击
+    path: "nft",
+    // component: require("../pages/Home").default // todo 让这个按钮不能被点击
   },
   // {
   //   name: "Page2",

@@ -1,16 +1,25 @@
 .module {
   height: 100%;
-
-  &-blue {
-    background-color: @module-color !important;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      color: @white !important;
-    }
+  background-color: transparent !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: @white !important;
   }
+  &-blue {
+    // background-color: @module-color !important;
+  }
+}
+
+.wrapper {
+  height: 100%;
+  background-image: url("../../../assets//module-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }

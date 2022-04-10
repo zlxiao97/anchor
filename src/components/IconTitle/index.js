@@ -7,7 +7,7 @@ export default ({ icon, title }) => {
   return (
     <div className={styles.wrapper}>
       <img src={icon} />
-      <Title level={5}>{title}</Title>
+      <Title level={3}>{title}</Title>
     </div>
   );
 };

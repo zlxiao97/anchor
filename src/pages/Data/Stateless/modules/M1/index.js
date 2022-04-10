@@ -1,5 +1,6 @@
-import { Button, Col, Row, Statistic, Typography } from "antd";
+import { Button, Col, Row, Typography } from "antd";
 import IconTitle from "@/components/IconTitle";
+import Statistic from "@/components/Statistic";
 import number0Image from "@/assets/number0.png";
 import number1Image from "@/assets/number1.png";
 import number2Image from "@/assets/number2.png";
@@ -13,16 +14,16 @@ import number9Image from "@/assets/number9.png";
 import clockIcon from "@/assets/icon-clock.png";
 import IncomeIcon from "@/assets/icon-income.png";
 import styles from "./index.module.less";
+import classNames from "classnames";
 
 const { Title } = Typography;
 const { Countdown } = Statistic;
 
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
 
-
 // todo  Earn字大一点， ETH 和数量放成一行，然后title左对齐，数量右对齐
 
-export default () => {
+export default (props) => {
   return (
     <>
       <div className={styles.content}>
@@ -30,13 +31,18 @@ export default () => {
         <div className={styles.content__value}>
           <Countdown value={deadline} format="m [MIN] s [SEC]" />
         </div> */}
-        <IconTitle title="Earn:" />  
+        <IconTitle title="Earn:" />
         <div className={styles.content__value}>
-          <Statistic title="ETH" value={1} precision={4} />
-          <Statistic title="BNB" value={1} precision={4} />
-          <Statistic title="USDT" value={1} precision={4} />
-          <Statistic title="DOGE" value={1} precision={4} />
-          <Button type="large" shape="round" className={styles.btn}>
+          <Statistic layout="horizontal" title="ETH" value={1} precision={4} />
+          <Statistic layout="horizontal" title="BNB" value={1} precision={4} />
+          <Statistic layout="horizontal" title="USDT" value={1} precision={4} />
+          <Statistic layout="horizontal" title="DOGE" value={1} precision={4} />
+          <Button
+            type="large"
+            shape="round"
+            className={styles.btn}
+            onClick={props.onBtnLeftClick}
+          >
             Claim
           </Button>
         </div>
@@ -49,43 +55,39 @@ export default () => {
         </Row>
         <div className={styles.numbers__content}>
           <Row gutter={[32, 32]}>
-            <Col offset={2} span={4}>
-              <img src={number0Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number1Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number2Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number3Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number4Image} />
-            </Col>
-            <Col offset={2} span={4}>
-              <img src={number5Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number6Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number7Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number8Image} />
-            </Col>
-            <Col span={4}>
-              <img src={number9Image} />
-            </Col>
+            {[
+              number0Image,
+              number1Image,
+              number2Image,
+              number3Image,
+              number4Image,
+              number5Image,
+              number6Image,
+              number7Image,
+              number8Image,
+              number9Image
+            ].map((img, index) => (
+              <Col offset={index % 5 === 0 ? 2 : 0} span={4}>
+                <img
+                  onClick={() => props.onSelectNumber(index)}
+                  className={classNames(styles.numbers__img, {
+                    [styles["numbers__img-select"]]: props.selected === index
+                  })}
+                  src={img}
+                />
+              </Col>
+            ))}
           </Row>
         </div>
         <div className={styles.numbers__btns}>
-          {/* <Button shape="round" className={styles.btn}>
+          {/* <Button shape="round" className={styles.btn} onClick={props.onBtn1Click}>
             Open
           </Button> */}
-          <Button shape="round" className={styles.btn}>
+          <Button
+            shape="round"
+            className={styles.btn}
+            onClick={props.onBtn2Click}
+          >
             Open
           </Button>
         </div>

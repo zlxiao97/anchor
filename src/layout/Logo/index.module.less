@@ -1,15 +1,19 @@
 .logo {
   display: flex;
   float: left;
-  width: 150px;
   height: 100%;
   margin-right: calc(@margin-lg * 3);
   align-items: center;
   &__img {
-    width: 100%;
+    width: @height-lg;
     height: @height-lg;
-    background: url("../../assets//logo.png");
+    background: url("../../assets//logo.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+  }
+  &__title{
+    font-size: @heading-2-size;
+    margin-left: @margin-sm;
+    font-weight: bolder !important;
   }
 }

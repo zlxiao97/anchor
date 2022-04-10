@@ -1,7 +1,7 @@
 .numbers {
   position: absolute;
   right: 5.2%;
-  bottom: -15.34%;
+  bottom: 0%;
   width: 56%;
   padding: calc(@padding-lg * 1.8) 0;
   background-color: #f7f8ff;
@@ -9,6 +9,15 @@
 
   &__content {
     margin-top: @margin-lg;
+  }
+
+  &__img {
+    cursor: pointer;
+    pointer-events: all !important;
+  }
+
+  &__img-select {
+    border: 1px solid @primary-color;
   }
 
   &__btns {
@@ -21,7 +30,7 @@
 
 .content {
   margin-left: 6.3%;
-  margin-top: calc(@margin-lg * 2);
+  margin-top: calc(@margin-lg * 3);
 
   :global {
     .ant-statistic-content,
@@ -31,6 +40,7 @@
   }
 
   &__value {
+    max-width: 20vw;
     margin: @margin-md 0 @margin-lg calc(@margin-lg * 2);
   }
 }

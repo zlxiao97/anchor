@@ -4,7 +4,7 @@ import { createMenuItem } from "./utils/createMenuItem";
 
 export default () => {
   return (
-    <Menu theme="dark" mode="horizontal">
+    <Menu theme="light" mode="horizontal">
       {routes.map(createMenuItem)}
     </Menu>
   );

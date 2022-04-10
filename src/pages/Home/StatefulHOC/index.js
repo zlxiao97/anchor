@@ -50,5 +50,6 @@ export default (Stateless) => (props) => {
     onTitleBtn2Click,
     onMiddleBtnClick
   };
+
   return <Stateless {...props} {...callback} />;
 };

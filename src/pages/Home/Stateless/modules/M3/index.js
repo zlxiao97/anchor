@@ -7,11 +7,11 @@ const { Title } = Typography;
 export default (props) => {
   return (
     <div className={styles.container}>
-      <Row gutter={75}>
-        <Col offset={4} span={9}>
+      <Row gutter={{ xxl: 75, xl: 60 }}>
+        <Col offset={4} xxl={9} xl={7}>
           {/* <img src={m3Image} /> */}
         </Col>
-        <Col span={8}>
+        <Col xxl={8} xl={10} >
           <Title level={2}>Hold to Earn</Title>
           <Title level={4}>
           A limited NFT collection of spacecrafts where the token itself  will carry you to metaspace to get find more treasure in the futrure.

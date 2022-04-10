@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default (Stateless) => (props) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const {
     connect,
     disconnect,
@@ -19,21 +19,21 @@ export default (Stateless) => (props) => {
   /**
    * 用户点击 White Paper 按钮
    */
-  const onTitleBtn1Click = () => {
+  const onTitleBtn1Click = async () => {
     // window.location.assign('/wp.pdf')
   };
 
   /**
    * 用户点击 Play 按钮
    */
-  const onTitleBtn2Click = () => {
-    navigate('/data')
+  const onTitleBtn2Click = async () => {
+    navigate("/data");
   };
 
   /**
-   * 用户点击中间 Lauch Community 按钮
+   * 用户点击 Get NFT 按钮
    */
-  const onMiddleBtnClick = () => {
+  const onMiddleBtnClick = async () => {
     console.log("onMiddleBtnClick");
   };
 

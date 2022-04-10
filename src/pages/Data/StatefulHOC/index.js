@@ -16,28 +16,28 @@ export default (Stateless) => (props) => {
   const [selected, setSelected] = useState();
 
   /**
-   * 用户点击右侧第一个 template 按钮
+   * 用户点击右侧从左往右数第一个 OPEN 按钮
    */
-  const onBtn1Click = () => {
+  const onBtn1Click = async () => {
     if (selected !== undefined) {
       alert(selected);
     }
   };
 
   /**
-   * 用户点击右侧第二个 template 按钮
+   * 用户点击右侧从左往右数第二个 OPEN 按钮
    */
-  const onBtn2Click = () => {
+  const onBtn2Click = async () => {
     if (selected !== undefined) {
       alert(selected);
     }
   };
 
   /**
-   * 用户点击左侧第一个 template 按钮
+   * 用户点击左侧 Claim 按钮
    */
-  const onBtnLeftClick = () => {
-    console.log("onBtnLeftClick");
+  const onBtnLeftClick = async () => {
+    console.log("Claim");
   };
 
   /**

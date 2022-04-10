@@ -20,7 +20,7 @@ export default (Stateless) => (props) => {
    */
   const onBtn1Click = async () => {
     if (selected !== undefined) {
-      alert(selected);
+      alert("coming soon");
     }
   };
 
@@ -29,7 +29,7 @@ export default (Stateless) => (props) => {
    */
   const onBtn2Click = async () => {
     if (selected !== undefined) {
-      alert(selected);
+      alert("coming soon");
     }
   };
 

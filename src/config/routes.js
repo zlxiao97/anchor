@@ -1,3 +1,5 @@
+import { message } from "antd";
+
 export const homePath = "/home";
 
 export default [
@@ -25,8 +27,11 @@ export default [
   {
     name: "NFT", // todo 点击后弹框显示 coming soon
     path: "nft",
-    // component: require("../pages/Home").default 
-  },
+    onClick: () => {
+      message.info("coming soon");
+    }
+    // component: require("../pages/Home").default
+  }
   // {
   //   name: "Page2",
   //   path: "page2",

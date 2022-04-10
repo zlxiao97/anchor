@@ -20,19 +20,19 @@ export default (Stateless) => (props) => {
   // todo  approve是一直能点的，Join是输完之后才能点
   /**
    * 用户点击 Approve 按钮
-   * @param  {Object} values 表单数据
    */
-  const approve = async (values) => {
-    console.log("Current Address: ", address);
-    console.log("Web3 Provider: ", provider);
-    console.log("Received values of form: ", values);
+  const approve = async () => {
+    console.log("approve button was clicked");
   };
 
   /**
    * 用户点击 Join PreSale 按钮
+   * @param  {Object} values 表单数据
    */
-  const joinPresale = async () => {
-    console.log("join button was clicked");
+  const joinPresale = async (values) => {
+    console.log("Current Address: ", address);
+    console.log("Web3 Provider: ", provider);
+    console.log("Received values of form: ", values);
   };
 
   /**

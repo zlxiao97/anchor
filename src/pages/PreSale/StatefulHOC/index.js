@@ -1,18 +1,16 @@
 import { useWeb3Context } from "@/vendors/hooks/web3-context";
 import useFormValidate from "@/hooks/useFormValidate";
-import { Form } from "antd";
+import { Form, message, Modal } from "antd";
 import { useEffect } from "react";
 
-import { ethers } from "ethers";  // todo npm install可以自动安装
+import { ethers } from "ethers"; // todo npm install可以自动安装
 import PresaleJson from "../../../artifacts/contracts/IDO.sol/ONESale.json";
 import UsdtJson from "../../../artifacts/contracts/online/USDT.json";
 
 // todo 页面刷新后就得重新连接钱包; 点击连击钱包后还在原页面，不用跳转到presale
 
 // todo 这些参数放在一个地方可以让所有页面import
-const USDT_largeApproval = "100000000000000000000000000000000";
-const IDO_ADDRESS = "0x47B00a422678130337A02675B4d2B0EAe6935CE5";
-const USDT_ADDRESS = "0x55d398326f99059fF775485246999027B3197955"; 
+import { USDT_largeApproval, IDO_ADDRESS, USDT_ADDRESS } from "@/config/web3";
 
 export default (Stateless) => (props) => {
   const [form] = Form.useForm();
@@ -27,12 +25,11 @@ export default (Stateless) => (props) => {
     web3Modal,
     providerChainID
   } = useWeb3Context();
-  
+
   const [isValid, onValuesChange] = useFormValidate(form);
   const signer = provider.getSigner();
-  const presale = new ethers.Contract(IDO_ADDRESS, PresaleJson["abi"], signer); 
+  const presale = new ethers.Contract(IDO_ADDRESS, PresaleJson["abi"], signer);
   const usdt = new ethers.Contract(USDT_ADDRESS, UsdtJson["abi"], signer);
-
 
   /**
    * 用户点击 Approve 按钮
@@ -41,15 +38,20 @@ export default (Stateless) => (props) => {
     console.log("approve button was clicked");
     console.log("connected", connected);
     if (!connected) {
-      console.log("Connect your wallet first!") //todo 弹窗显示
+      Modal.warning({ title: "Connect your wallet first!" });
+      console.log("Connect your wallet first!"); //todo 弹窗显示
     }
-    
+
     const user_address = await signer.getAddress();
     // const approval = await usdt.allowance(user_address, presale.address);
     // if (approval > 0) {
     //   dispatch(warning({ text: "you have approved" })); // todo弹框显示
+    //   Modal.warning({ title: "you have approved" });
     // } else {
-    //   const approval_ret = await usdt.approve(presale.address, USDT_largeApproval);
+    //   const approval_ret = await usdt.approve(
+    //     presale.address,
+    //     USDT_largeApproval
+    //   );
     // }
   };
 
@@ -67,7 +69,6 @@ export default (Stateless) => (props) => {
    */
   const init = async () => {
     console.log("init");
-
   };
 
   useEffect(() => {

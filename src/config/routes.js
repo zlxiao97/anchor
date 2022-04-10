@@ -10,7 +10,7 @@ export default [
   //   hideInMenu: true
   // },
   {
-    name: "HOME",
+    name: "Home",
     path: "home",
     component: require("../pages/Home").default
   },

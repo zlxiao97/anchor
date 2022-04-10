@@ -16,6 +16,11 @@ import { useWeb3Context } from "@/vendors/hooks/web3-context";
  * 找一个从远程获取随机数的函数；
  */
 
+/**  页面 todo
+ * 手机连接先只跳转Play页面，需要适配一下
+ * NFT的comming soon弹窗只显示1.5s
+ */
+
 export default (Stateless) => (props) => {
   const {
     connect,

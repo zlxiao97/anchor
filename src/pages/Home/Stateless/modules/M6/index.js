@@ -14,15 +14,16 @@ export default () => {
     <div className={styles.container}>
       <Row>
         <Col offset={6} span={12}>
-          <Title level={3}> 
-            Join our growing ecosystem of leading infrastructure partners, 
-            liquidity platforms, data providers and more!
+          <Title level={2} style={{textAlign:'center'}} >Partners</Title>
+          <Title level={3} style={{textAlign:'center'}}>
+            Join our growing ecosystem <br /> of leading infrastructure
+            partners, liquidity platforms, data providers and more!
           </Title>
         </Col>
       </Row>
 
       <div className={styles.brands}>
-        <Row gutter={[70,70]}>
+        <Row gutter={[70, 70]}>
           <Col offset={4} span={5}>
             <div className={styles.brands__item}>
               <img src={m61Image} />

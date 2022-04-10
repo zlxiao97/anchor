@@ -15,7 +15,7 @@ export default (props) => {
     className: styles.form,
     layout: "vertical",
     onValuesChange: props.onValuesChange,
-    onFinish: props.approve
+    onFinish: props.joinPresale
   };
   return (
     <div className={styles.container}>
@@ -44,9 +44,8 @@ export default (props) => {
         <Form.Item>
           <Button
             type="primary"
-            disabled={!isValid}
-            htmlType="submit"
             className={styles.form__btn}
+            onClick={props.approve}
           >
             {button.approve}
           </Button>
@@ -54,7 +53,8 @@ export default (props) => {
         <Form.Item>
           <Button
             type="primary"
-            onClick={props.joinPresale}
+            htmlType="submit"
+            disabled={!isValid}
             className={styles.form__btn}
           >
             {button.join}

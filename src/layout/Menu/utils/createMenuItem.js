@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu } from "antd";
 const { Item, SubMenu } = Menu;
 
-const createLeafNode = ({ component, path, name, hideInMenu }) =>
+const createLeafNode = ({ component, path, name, hideInMenu, onClick }) =>
   hideInMenu ? null : component ? (
     <Item key={uuidv4()}>
       <Link key={uuidv4()} to={`/${path}`}>
@@ -11,7 +11,7 @@ const createLeafNode = ({ component, path, name, hideInMenu }) =>
       </Link>
     </Item>
   ) : (
-    <Item key={uuidv4()}>{name}</Item>
+    <Item key={uuidv4()} onClick={onClick} >{name}</Item>
   );
 
 const createSubMenu = ({ route, path, name, hideInMenu }) =>
@@ -28,9 +28,9 @@ const createSubMenu = ({ route, path, name, hideInMenu }) =>
   );
 
 export const createMenuItem = (route) => {
-  const { path, name, hideInMenu, component } = route;
+  const { path, name, hideInMenu, component, onClick } = route;
   const _createMenuItem = route?.children?.length
     ? createSubMenu
     : createLeafNode;
-  return _createMenuItem({ route, path, name, hideInMenu, component });
+  return _createMenuItem({ route, path, name, hideInMenu, component, onClick });
 };

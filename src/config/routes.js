@@ -23,9 +23,9 @@ export default [
     component: require("../pages/Data").default
   },
   {
-    name: "SpaceShip NFT",
+    name: "NFT", // todo 点击后弹框显示 coming soon
     path: "nft",
-    // component: require("../pages/Home").default // todo 让这个按钮不能被点击
+    // component: require("../pages/Home").default 
   },
   // {
   //   name: "Page2",

@@ -1,10 +1,21 @@
 import { useWeb3Context } from "@/vendors/hooks/web3-context";
 import useFormValidate from "@/hooks/useFormValidate";
 import { Form } from "antd";
+import { useEffect } from "react";
 
 export default (Stateless) => (props) => {
   const [form] = Form.useForm();
-  const { address, provider } = useWeb3Context();
+  const {
+    connect,
+    disconnect,
+    hasCachedProvider,
+    provider,
+    connected,
+    address,
+    chainID,
+    web3Modal,
+    providerChainID
+  } = useWeb3Context();
   const [isValid, onValuesChange] = useFormValidate(form);
   /**
    * 用户点击 Approve 按钮
@@ -22,6 +33,18 @@ export default (Stateless) => (props) => {
   const joinPresale = async () => {
     console.log("join button was clicked");
   };
+
+  /**
+   * 页面初始化
+   */
+  const init = async () => {
+    console.log("init");
+  };
+
+  useEffect(() => {
+    init();
+  }, []);
+
   const data = {
     form,
     isValid

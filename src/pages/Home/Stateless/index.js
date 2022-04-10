@@ -9,7 +9,7 @@ import M6 from "./modules/M6";
 
 export default (props) => {
   return (
-    <>
+    <div className={styles.wrapper}>
       <PageLayout layouts={layouts}>
         <div key="m1">
           <ModuleContainer
@@ -31,6 +31,6 @@ export default (props) => {
           </ModuleContainer>
         </div>
       </PageLayout>
-    </>
+    </div>
   );
 };

@@ -13,18 +13,18 @@ export default [
     component: require("../pages/Home").default
   },
   {
-    name: "Hunt",
-    path: "data",
-    component: require("../pages/Data").default
-  },
-  {
     name: "PreSale",
     path: "preSale",
     component: require("../pages/PreSale").default
   },
   {
+    name: "Play",
+    path: "data",
+    component: require("../pages/Data").default
+  },
+  {
     name: "SpaceShip NFT",
-    path: "",
+    path: "home",
     component: require("../pages/Home").default // todo 让这个按钮不能被点击
   },
   // {

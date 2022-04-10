@@ -5,7 +5,7 @@ import styles from "./index.module.less";
 const { Title } = Typography;
 
 
-// todo White Paper按钮点后显示一个pdf
+// todo White Paper按钮点后显示一个pdf   点开Play按钮跳转到Play页面
 export default () => {
   return (
     <div className={styles.container} >
@@ -13,7 +13,7 @@ export default () => {
         <Col offset={4} span={8}>
           <Title>Play to Earn</Title>
           <Title level={3}>
-            Join our games to win the treasure that are eligible to fly the spacecraft to metapsace, with prizes that multiply every day. There will be a round of treasure hunting activities every 3 minutes so don't miss your chance to multiply your fun!
+            Join our games to win the treasure that are eligible to fly the spacecraft to metapsace. So select a number then hunting other coins in treasure!
           </Title>
           <Row gutter={41} className={styles.btns}>
             <Col span={13}>

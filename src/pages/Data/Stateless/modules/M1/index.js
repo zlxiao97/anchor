@@ -19,20 +19,25 @@ const { Countdown } = Statistic;
 
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
 
+
+// todo  Earn字大一点， ETH 和数量放成一行，然后title左对齐，数量右对齐
+
 export default () => {
   return (
     <>
       <div className={styles.content}>
-        <IconTitle icon={clockIcon} title="开奖倒计时" />
+        {/* <IconTitle icon={clockIcon} title="开奖倒计时" />
         <div className={styles.content__value}>
           <Countdown value={deadline} format="m [MIN] s [SEC]" />
-        </div>
-        <IconTitle icon={IncomeIcon} title="收益情况" />
+        </div> */}
+        <IconTitle title="Earn:" />  
         <div className={styles.content__value}>
-          <Statistic title="数量" value={100} />
-          <Statistic title="APY" value={1000} precision={2} />
+          <Statistic title="ETH" value={1} precision={4} />
+          <Statistic title="BNB" value={1} precision={4} />
+          <Statistic title="USDT" value={1} precision={4} />
+          <Statistic title="DOGE" value={1} precision={4} />
           <Button type="large" shape="round" className={styles.btn}>
-            TEMPLATE
+            Claim
           </Button>
         </div>
       </div>
@@ -77,11 +82,11 @@ export default () => {
           </Row>
         </div>
         <div className={styles.numbers__btns}>
+          {/* <Button shape="round" className={styles.btn}>
+            Open
+          </Button> */}
           <Button shape="round" className={styles.btn}>
-            TEMPLATE
-          </Button>
-          <Button shape="round" className={styles.btn}>
-            TEMPLATE
+            Open
           </Button>
         </div>
       </div>

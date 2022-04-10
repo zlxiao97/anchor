@@ -1,5 +1,6 @@
-import { Button, Col, Row, Statistic, Typography } from "antd";
+import { Button, Col, Row, Typography } from "antd";
 import IconTitle from "@/components/IconTitle";
+import Statistic from "@/components/Statistic";
 import number0Image from "@/assets/number0.png";
 import number1Image from "@/assets/number1.png";
 import number2Image from "@/assets/number2.png";
@@ -20,20 +21,29 @@ const { Countdown } = Statistic;
 
 const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
 
+// todo  Earn字大一点， ETH 和数量放成一行，然后title左对齐，数量右对齐
+
 export default (props) => {
   return (
     <>
       <div className={styles.content}>
-        <IconTitle icon={clockIcon} title="开奖倒计时" />
+        {/* <IconTitle icon={clockIcon} title="开奖倒计时" />
         <div className={styles.content__value}>
           <Countdown value={deadline} format="m [MIN] s [SEC]" />
-        </div>
-        <IconTitle icon={IncomeIcon} title="收益情况" />
+        </div> */}
+        <IconTitle title="Earn:" />
         <div className={styles.content__value}>
-          <Statistic title="数量" value={100} />
-          <Statistic title="APY" value={1000} precision={2} />
-          <Button type="large" shape="round" className={styles.btn} onClick={props.onBtnLeftClick}>
-            TEMPLATE
+          <Statistic layout="horizontal" title="ETH" value={1} precision={4} />
+          <Statistic layout="horizontal" title="BNB" value={1} precision={4} />
+          <Statistic layout="horizontal" title="USDT" value={1} precision={4} />
+          <Statistic layout="horizontal" title="DOGE" value={1} precision={4} />
+          <Button
+            type="large"
+            shape="round"
+            className={styles.btn}
+            onClick={props.onBtnLeftClick}
+          >
+            Claim
           </Button>
         </div>
       </div>
@@ -70,19 +80,15 @@ export default (props) => {
           </Row>
         </div>
         <div className={styles.numbers__btns}>
-          <Button
-            shape="round"
-            className={styles.btn}
-            onClick={props.onBtn1Click}
-          >
-            TEMPLATE
-          </Button>
+          {/* <Button shape="round" className={styles.btn} onClick={props.onBtn1Click}>
+            Open
+          </Button> */}
           <Button
             shape="round"
             className={styles.btn}
             onClick={props.onBtn2Click}
           >
-            TEMPLATE
+            Open
           </Button>
         </div>
       </div>

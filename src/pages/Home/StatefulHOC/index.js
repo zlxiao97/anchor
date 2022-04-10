@@ -1,7 +1,9 @@
 import { useWeb3Context } from "@/vendors/hooks/web3-context";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default (Stateless) => (props) => {
+  const navigate = useNavigate()
   const {
     connect,
     disconnect,
@@ -13,18 +15,19 @@ export default (Stateless) => (props) => {
     web3Modal,
     providerChainID
   } = useWeb3Context();
+
   /**
-   * 用户点击标题第一个 Lauch Community 按钮
+   * 用户点击 White Paper 按钮
    */
   const onTitleBtn1Click = () => {
-    console.log("onTitleBtn1Click");
+    // window.location.assign('/wp.pdf')
   };
 
   /**
-   * 用户点击标题第二个 Stake Fuse 按钮
+   * 用户点击 Play 按钮
    */
   const onTitleBtn2Click = () => {
-    console.log("onTitleBtn2Click");
+    navigate('/data')
   };
 
   /**

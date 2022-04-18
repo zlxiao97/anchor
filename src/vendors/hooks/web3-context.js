@@ -2,7 +2,7 @@ import React, { useState, useContext, useMemo, useCallback } from "react";
 import Web3Modal from "web3modal";
 import { StaticJsonRpcProvider, Web3Provider } from "@ethersproject/providers";
 import WalletConnectProvider from "@walletconnect/web3-provider";
-import { getBscTestURI } from "./helpers";
+import { getBscTestURI, getBscURI } from "./helpers";
 import { DEFAULD_NETWORK } from "../constants";
 import { Networks } from "../constants";
 import { messages } from "../constants/messages";
@@ -35,7 +35,8 @@ export const Web3ContextProvider = ({ children }) => {
   const [providerChainID, setProviderChainID] = useState(DEFAULD_NETWORK);
   const [address, setAddress] = useState("");
 
-  const [uri] = useState(getBscTestURI());
+  // const [uri] = useState(getBscTestURI());
+  const [uri] = useState(getBscURI());
 
   var [provider, setProvider] = useState(new StaticJsonRpcProvider(uri));
 
@@ -47,7 +48,8 @@ export const Web3ContextProvider = ({ children }) => {
           package: WalletConnectProvider,
           options: {
             rpc: {
-              [Networks.BSCTEST]: getBscTestURI()
+              // [Networks.BSCTEST]: getBscTestURI()
+              [Networks.BSC]: getBscURI()
             }
           }
         }
@@ -99,6 +101,7 @@ export const Web3ContextProvider = ({ children }) => {
     const chainId = await connectedProvider
       .getNetwork()
       .then((network) => Number(network.chainId));
+    console.log("chainId", chainId);
     const connectedAddress = await connectedProvider.getSigner().getAddress();
     console.log("connect()", connectedAddress, chainID);
 

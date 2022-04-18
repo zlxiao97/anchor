@@ -22,7 +22,7 @@ export default (props) => {
                 type="primary"
                 className={styles.btn}
                 onClick={props.onTitleBtn1Click}
-                href='/wp.pdf'
+                href='/whitepaper.pdf'
                 target='_blank'
               >
                 White Paper

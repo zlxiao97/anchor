@@ -25,8 +25,18 @@ export default [
     component: require("../pages/Data").default
   },
   {
+    name: "SuperLotto", 
+    path: "supperlotto",
+    component: require("../pages/Home").default
+  },
+  {
     name: "NFT", 
     path: "nft",
+    component: require("../pages/Home").default
+  },
+  {
+    name: "Market", 
+    path: "market",
     onClick: () => {
       message.info("coming soon");
     }

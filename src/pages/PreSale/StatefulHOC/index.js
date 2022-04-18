@@ -51,9 +51,20 @@ export default (Stateless) => (props) => {
    * 用户点击 Join PreSale 按钮
    * @param  {Object} values 表单数据
    */
-  const joinPresale = async (usdt_amount) => {
-    const tx = await presale.buy(usdt_amount);
-    await tx.wait();
+  const joinPresale = async (amount) => {
+    const usdt_amount = amount['from'];
+    var tx;
+    try {
+      tx = await presale.buy(usdt_amount);
+      await tx.wait();
+    } catch (e) {
+      if ("account" in e) {
+        Modal.warning({ title: "Please connect your wallet" });
+      } else if (e['data']['message'].search("amount exceed") != -1) {
+        Modal.warning({ title: "USDT is not enough" });
+      }
+    }    
+    
   };
 
   /**

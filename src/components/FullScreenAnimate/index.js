@@ -97,7 +97,9 @@ export default () => {
         [styles["canvas-show"]]: isShow
       })}
     >
-      <img src={currentGif} alt="" />
+      <div className={styles.canvas__content}>
+        <img src={currentGif} alt="" />
+      </div>
     </div>
   );
 };

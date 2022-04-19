@@ -78,11 +78,12 @@ export default () => {
   };
 
   const openBox = (message, data = {}) => {
-    const { selected = 0, isWin = true } = data;
+    const { selected = 0, isWin = true, onFinish } = data;
     setCurrentGif(get(gifs, `[${selected}].${isWin ? "win" : "thanks"}`));
     setIsShow(true);
     setTimeout(() => {
       reset();
+      onFinish();
     }, OPEN_ANIMATION_DURATION);
   };
 

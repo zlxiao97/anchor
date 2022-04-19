@@ -32,7 +32,7 @@ export default [
   {
     name: "NFT", 
     path: "nft",
-    component: require("../pages/Home").default
+    component: require("../pages/NFT").default
   },
   {
     name: "Market", 

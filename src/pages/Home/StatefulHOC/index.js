@@ -20,7 +20,7 @@ export default (Stateless) => (props) => {
    * 用户点击 White Paper 按钮
    */
   const onTitleBtn1Click = async () => {
-    // window.location.assign('/wp.pdf')
+    // window.location.assign('/wihtepaper.pdf')
   };
 
   /**

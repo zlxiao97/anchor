@@ -15,7 +15,11 @@ export default (props) => {
     className: styles.form,
     layout: "vertical",
     onValuesChange: props.onValuesChange,
-    onFinish: props.joinPresale
+    onFinish: (values) =>
+      props.joinPresale({
+        from: +values.from,
+        to: +values.to
+      })
   };
   return (
     <div className={styles.container}>

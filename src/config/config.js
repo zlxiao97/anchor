@@ -2,3 +2,5 @@
 export const USDT2META = USDT => 100 * USDT;
 // 连接钱包后要跳转的页面
 export const PATH_AFTER_CONNECT = '/preSale'
+// 开箱动画时长
+export const OPEN_ANIMATION_DURATION = 3000

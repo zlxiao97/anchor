@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import PubSub from "pubsub-js";
 import { useWeb3Context } from "@/vendors/hooks/web3-context";
+import useStates from "@/hooks/useStates";
+import reducer from "./utils/reducer";
 
 /**  钱包 todo
  * 连接钱包后显示如下  0x前4个字母...后4个字母；
@@ -35,6 +37,12 @@ export default (Stateless) => (props) => {
     providerChainID
   } = useWeb3Context();
   const [selected, setSelected] = useState();
+  const [state, dispatch] = useStates(reducer, {
+    eth: 0,
+    bnb: 0,
+    usdt: 0,
+    dnge: 0
+  });
 
   /**
    * 用户点击 OPEN 按钮
@@ -43,20 +51,25 @@ export default (Stateless) => (props) => {
     if (selected !== undefined) {
       // alert("coming soon");
       console.log("coming soon");
+      // 更新左边数据
+
+      // 播放动画
       PubSub.publish("OPEN BOX", {
         selected,
-        isWin: Math.random() > 0.5 // todo: 对接接口
+        isWin: Math.random() > 0.5, // todo: 对接接口
+        onFinish() {
+          // 动画播放完毕后执行
+          dispatch({
+            type: "open",
+            payload: {
+              eth: state.eth + 1,
+              bnb: state.bnb + 1,
+              usdt: state.usdt + 1,
+              dnge: state.dnge + 1
+            }
+          });
+        }
       });
-    }
-  };
-
-  /**
-   * 用户点击右侧从左往右数第二个 OPEN 按钮
-   */
-  const onBtn2Click = async () => {
-    if (selected !== undefined) {
-      // alert("coming soon");
-      console.log("coming soon");
     }
   };
 
@@ -65,6 +78,7 @@ export default (Stateless) => (props) => {
    */
   const onBtnLeftClick = async () => {
     console.log("Claim");
+    dispatch({ type: "claim", payload: {} });
   };
 
   /**
@@ -72,6 +86,7 @@ export default (Stateless) => (props) => {
    */
   const init = async () => {
     console.log("init");
+    dispatch({ type: "init", payload: provider });
   };
 
   useEffect(() => {
@@ -80,9 +95,10 @@ export default (Stateless) => (props) => {
 
   const callback = {
     onOpen,
-    onBtn2Click,
     onBtnLeftClick,
     onSelectNumber: setSelected
   };
-  return <Stateless {...props} selected={selected} {...callback} />;
+  return (
+    <Stateless {...props} selected={selected} state={state} {...callback} />
+  );
 };

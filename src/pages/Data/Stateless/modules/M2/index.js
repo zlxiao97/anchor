@@ -17,16 +17,16 @@ export default (props) => (
         <Title level={4}>EARN</Title>
         <ul className={styles.data__list}>
           <li>
-            <Title level={4}>ETH:</Title>
+            <Title level={4}>ETH: {props.state.eth}</Title>
           </li>
           <li>
-            <Title level={4}>BNB:</Title>
+            <Title level={4}>BNB: {props.state.bnb}</Title>
           </li>
           <li>
-            <Title level={4}>USDT:</Title>
+            <Title level={4}>USDT: {props.state.usdt}</Title>
           </li>
           <li>
-            <Title level={4}>DNGE:</Title>
+            <Title level={4}>DNGE: {props.state.dnge}</Title>
           </li>
         </ul>
         <div className={styles.data__btn}>Claim</div>
@@ -46,7 +46,9 @@ export default (props) => (
         ))}
       </div>
       <div className={styles.boxs__footer}>
-        <div className={styles.boxs__btn} onClick={props.onOpen} >OPEN</div>
+        <div className={styles.boxs__btn} onClick={props.onOpen}>
+          OPEN
+        </div>
       </div>
     </Col>
   </Row>

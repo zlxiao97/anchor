@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PubSub from "pubsub-js";
 import { useWeb3Context } from "@/vendors/hooks/web3-context";
 
 /**  钱包 todo
@@ -6,7 +7,7 @@ import { useWeb3Context } from "@/vendors/hooks/web3-context";
  * 连接钱包后刷新保持状态；
  */
 
-/**  play页面 todo 
+/**  play页面 todo
  * 删除掉onBtn2Click；
  * 选中后将数字的圆圈颜色填充成一个颜色；
  * 点击open后居中弹框一个进度条；
@@ -36,12 +37,16 @@ export default (Stateless) => (props) => {
   const [selected, setSelected] = useState();
 
   /**
-   * 用户点击右侧从左往右数第一个 OPEN 按钮
+   * 用户点击 OPEN 按钮
    */
-  const onBtn1Click = async () => {
+  const onOpen = async () => {
     if (selected !== undefined) {
       // alert("coming soon");
-      console.log("coming soon")
+      console.log("coming soon");
+      PubSub.publish("OPEN BOX", {
+        selected,
+        isWin: Math.random() > 0.5 // todo: 对接接口
+      });
     }
   };
 
@@ -51,7 +56,7 @@ export default (Stateless) => (props) => {
   const onBtn2Click = async () => {
     if (selected !== undefined) {
       // alert("coming soon");
-      console.log("coming soon")
+      console.log("coming soon");
     }
   };
 
@@ -74,7 +79,7 @@ export default (Stateless) => (props) => {
   }, []);
 
   const callback = {
-    onBtn1Click,
+    onOpen,
     onBtn2Click,
     onBtnLeftClick,
     onSelectNumber: setSelected

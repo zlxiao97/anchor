@@ -7,7 +7,7 @@ export default (state, action = {}) => {
       console.log("web3 provider:", provider);
       return {
         ...state,
-        eth: 1,
+        eth: 0,
         bnb: 0,
         usdt: 0,
         dnge: 0

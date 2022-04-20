@@ -10,13 +10,7 @@ import reducer from "./utils/reducer";
  */
 
 /**  play页面 todo
- * 删除掉onBtn2Click；
  * 选中后将数字的圆圈颜色填充成一个颜色；
- * 点击open后居中弹框一个进度条；
- * 当open函数返回后进度条显示返回结果，并更新Earn数值；
- * connect wallet后将Earn的数值填充；
- * Claim后更新Earn的数值；
- * 找一个从远程获取随机数的函数；
  */
 
 /**  页面 todo
@@ -50,7 +44,7 @@ export default (Stateless) => (props) => {
   const onOpen = async () => {
     if (selected !== undefined) {
       // alert("coming soon");
-      console.log("coming soon");
+      // console.log("coming soon");
       // 更新左边数据
 
       // 播放动画

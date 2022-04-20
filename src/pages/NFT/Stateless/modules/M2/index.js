@@ -1,4 +1,4 @@
-import NFTIllustration from "@/assets/NFTIllustration.png";
+import NFTIllustration from "@/assets/NFTIllustration.gif";
 import styles from "./index.module.less";
 
 export default () => {

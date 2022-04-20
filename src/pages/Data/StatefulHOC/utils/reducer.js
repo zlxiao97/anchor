@@ -10,16 +10,16 @@ export default (state, action = {}) => {
         eth: 0,
         bnb: 0,
         usdt: 0,
-        dnge: 0
+        doge: 0
       };
     case "open":
-      const { eth, bnb, usdt, dnge } = payload;
+      const { eth, bnb, usdt, doge } = payload;
       return {
         ...state,
         eth,
         bnb,
         usdt,
-        dnge
+        doge
       };
     case "claim":
       return state;

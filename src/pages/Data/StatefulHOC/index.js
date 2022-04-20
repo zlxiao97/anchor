@@ -30,36 +30,61 @@ export default (Stateless) => (props) => {
     web3Modal,
     providerChainID
   } = useWeb3Context();
+
+  // contract init  
+
   const [selected, setSelected] = useState();
   const [state, dispatch] = useStates(reducer, {
     eth: 0,
     bnb: 0,
     usdt: 0,
-    dnge: 0
+    doge: 0
   });
+
+
+  const coin_dict = { 
+    0: state.usdt, 1: state.bnb, 2: state.eth, 3: state.doge
+  }
+  const decimals_dict = {
+    
+  }
+
+
+  // get usr reward 
+
 
   /**
    * 用户点击 OPEN 按钮
    */
   const onOpen = async () => {
     if (selected !== undefined) {
-      // alert("coming soon");
-      // console.log("coming soon");
-      // 更新左边数据
-
+      // index, vol = contract.open()
+      // coin_dict[index] += vol / decimals_dict[index];
+      
+      const number = Math.round(Math.random() * 4)
+      console.log(number)
+      if (number == 0) {
+        state.eth += 0.1;
+      } else if (number == 1) {
+        state.bnb += 1;
+      } else if (number == 2) {
+        state.usdt += 100;
+      } else {
+        state.doge += 500;
+      }
       // 播放动画
       PubSub.publish("OPEN BOX", {
         selected,
-        isWin: Math.random() > 0.5, // todo: 对接接口
+        isWin: true, // todo: 对接接口
         onFinish() {
           // 动画播放完毕后执行
           dispatch({
             type: "open",
             payload: {
-              eth: state.eth + 1,
-              bnb: state.bnb + 1,
-              usdt: state.usdt + 1,
-              dnge: state.dnge + 1
+              eth: state.eth,
+              bnb: state.bnb,
+              usdt: state.usdt,
+              doge: state.doge
             }
           });
         }

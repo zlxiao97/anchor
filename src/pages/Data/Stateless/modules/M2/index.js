@@ -26,7 +26,7 @@ export default (props) => (
             <Title level={4}>USDT: {props.state.usdt}</Title>
           </li>
           <li>
-            <Title level={4}>DNGE: {props.state.doge}</Title>
+            <Title level={4}>DOGE: {props.state.doge}</Title>
           </li>
         </ul>
         <div className={styles.data__btn}>Claim</div>

@@ -4,6 +4,12 @@ import { useWeb3Context } from "@/vendors/hooks/web3-context";
 import useStates from "@/hooks/useStates";
 import reducer from "./utils/reducer";
 
+// import CardJson from "../../../artifacts/contracts/OpenCard.sol/OpenCard.json";
+// import MetaJson from "../../../artifacts/contracts/online/Meta.json";
+
+import { USDT_largeApproval, IDO_ADDRESS, USDT_ADDRESS } from "@/config/web3";
+
+
 /**  钱包 todo
  * 连接钱包后显示如下  0x前4个字母...后4个字母；
  * 连接钱包后刷新保持状态；
@@ -31,36 +37,37 @@ export default (Stateless) => (props) => {
     providerChainID
   } = useWeb3Context();
 
-  // contract init  
+  const signer = provider.getSigner();
+  // const card = new ethers.Contract(CARD_ADDRESS, CardJson["abi"], signer);
+  // const meta = new ethers.Contract(META_ADDRESS, UsdtJson["abi"], signer);
 
   const [selected, setSelected] = useState();
-  const [state, dispatch] = useStates(reducer, {
-    eth: 0,
-    bnb: 0,
-    usdt: 0,
-    doge: 0
-  });
-
-
-  const coin_dict = { 
+  const [state, dispatch] = useStates(reducer, { eth: 0, bnb: 0, usdt: 0, doge: 0 });
+  var coin_dict = { 
     0: state.usdt, 1: state.bnb, 2: state.eth, 3: state.doge
   }
-  const decimals_dict = {
-    
-  }
-
-
-  // get usr reward 
-
+  
+  // const coin_decimals = await card.getDecimals();
+  // var reward = await card.getUserRewards();
+  // for (var i = 0; i < 4; i++) {
+  //   coin_dict[i] = reward[i] / coin_decimals[i];
+  // }
+  dispatch({
+    type: "open",
+    payload: {
+      eth: state.eth,
+      bnb: state.bnb,
+      usdt: state.usdt,
+      doge: state.doge
+    }
+  });
 
   /**
    * 用户点击 OPEN 按钮
    */
   const onOpen = async () => {
-    if (selected !== undefined) {
-      // index, vol = contract.open()
-      // coin_dict[index] += vol / decimals_dict[index];
-      
+    // for demo
+    if (selected !== undefined) {      
       const number = Math.round(Math.random() * 4)
       console.log(number)
       if (number == 0) {
@@ -72,7 +79,7 @@ export default (Stateless) => (props) => {
       } else {
         state.doge += 500;
       }
-      // 播放动画
+      //播放动画
       PubSub.publish("OPEN BOX", {
         selected,
         isWin: true, // todo: 对接接口
@@ -90,6 +97,33 @@ export default (Stateless) => (props) => {
         }
       });
     }
+
+
+    // if (selected !== undefined) {
+    //   const tx = await card.open(5);
+
+    //   PubSub.publish("OPEN BOX", {
+    //     selected,
+    //     isWin: true, // todo: 对接接口
+    //     onFinish() {
+    //       // 动画播放完毕后执行
+    //       await tx.wait();
+    //       reward = await card.getUserRewards();
+    //       for (var i = 0; i < 4; i++) {
+    //         coin_dict[i] = reward[i] / coin_decimals[i];
+    //       }
+    //       dispatch({
+    //         type: "open",
+    //         payload: {
+    //           eth: state.eth,
+    //           bnb: state.bnb,
+    //           usdt: state.usdt,
+    //           doge: state.doge
+    //         }
+    //       });
+    //     }
+    //   });
+    // }
   };
 
   /**
@@ -97,7 +131,22 @@ export default (Stateless) => (props) => {
    */
   const onBtnLeftClick = async () => {
     console.log("Claim");
-    dispatch({ type: "claim", payload: {} });
+    // var tx = await card.claim();
+    // await tx.wait();
+    
+    // reward = await card.getUserRewards();
+    // for (var i = 0; i < 4; i++) {
+    //   coin_dict[i] = reward[i] / coin_decimals[i];
+    // }
+    dispatch({
+      type: "open",
+      payload: {
+        eth: state.eth,
+        bnb: state.bnb,
+        usdt: state.usdt,
+        doge: state.doge
+      }
+    });
   };
 
   /**

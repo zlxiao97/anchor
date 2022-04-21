@@ -39,10 +39,16 @@
 .wrapper {
   position: relative;
   // background-color: rgb(11, 48, 101);
-  background-image: url("~@/assets/NFTIllustration.gif");
+  background-image: url("~@/assets/NFTBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position-y: @layout-header-height;
   min-height: calc(100vh - @layout-header-height);
+  overflow-x: hidden;
+}
+
+.illustration {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

@@ -6,11 +6,15 @@ import M2 from "./modules/M2";
 import M3 from "./modules/M3";
 import styles from "./index.module.less";
 import M4 from "./modules/M4";
+import NFTIllustration from "@/assets/NFTIllustration.gif";
+
 
 export default (props) => {
   return (
     <>
       <div className={styles.wrapper}>
+        <img className={styles.illustration} src={NFTIllustration} />
+
         <PageLayout layouts={layouts}>
           <div key="m1">
             <ModuleContainer
@@ -25,7 +29,7 @@ export default (props) => {
               className={styles.module}
               contentClassName={styles.module__m2}
             >
-              {/* <M2 {...props} /> */}
+              <M2 {...props} />
             </ModuleContainer>
           </div>
           <div key="m3">

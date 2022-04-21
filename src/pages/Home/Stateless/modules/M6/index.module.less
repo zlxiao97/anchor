@@ -4,7 +4,7 @@
 
 .brands {
   margin-top: calc(@margin-lg * 2.92);
-  padding: 0 calc(@padding-lg * 8);
+  padding: 0 170px;
   &__item {
     display: flex;
     justify-content: center;
@@ -14,5 +14,22 @@
     // border: 1px solid @gray-3;
     background-color: @white;
     border-radius: calc(@border-radius-base * 5);
+  }
+}
+
+.links {
+  color: white;
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+    padding-left: 0;
+  }
+  a{
+    color: white;
+  }
+  &__item {
+    display: flex;
+    column-gap: 9px;
   }
 }

@@ -13,7 +13,7 @@ export default (props) => {
   return (
     <>
       <div className={styles.wrapper}>
-        <img className={styles.illustration} src={NFTIllustration} />
+        {/* <img className={styles.illustration} src={NFTIllustration} /> */}
 
         <PageLayout layouts={layouts}>
           <div key="m1">

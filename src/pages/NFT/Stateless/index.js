@@ -25,7 +25,7 @@ export default (props) => {
               className={styles.module}
               contentClassName={styles.module__m2}
             >
-              {/* <M2 {...props} /> */}
+              <M2 {...props} />
             </ModuleContainer>
           </div>
           <div key="m3">

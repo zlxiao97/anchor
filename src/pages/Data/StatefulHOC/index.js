@@ -52,15 +52,15 @@ export default (Stateless) => (props) => {
   // for (var i = 0; i < 4; i++) {
   //   coin_dict[i] = reward[i] / coin_decimals[i];
   // }
-  dispatch({
-    type: "open",
-    payload: {
-      eth: state.eth,
-      bnb: state.bnb,
-      usdt: state.usdt,
-      doge: state.doge
-    }
-  });
+  // dispatch({
+  //   type: "open",
+  //   payload: {
+  //     eth: state.eth,
+  //     bnb: state.bnb,
+  //     usdt: state.usdt,
+  //     doge: state.doge
+  //   }
+  // });
 
   /**
    * 用户点击 OPEN 按钮

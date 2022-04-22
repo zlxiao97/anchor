@@ -18,39 +18,65 @@
   }
 
   &__m1 {
+    display: flex;
+    justify-content: center;
+    height: 100%;
     padding-top: 53px;
     padding-bottom: 0;
+    img {
+      height: 100%;
+    }
   }
 
   &__m2 {
     padding-top: 59px;
     padding-bottom: 0;
+    height: 100%;
   }
 
   &__m3 {
     padding: 0;
     padding-top: 61px;
+    height: 100%;
   }
 
   &__m4 {
-    padding: 63px 543px 0 543px;
+    width: 834px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 63px;
+    height: 100%;
   }
 }
+
+@media screen and (max-width: @screen-xxl) {
+  .module {
+    &__m1 {
+      padding-top: calc(53px / 1.25);
+    }
+
+    &__m2 {
+      padding-top: calc(59px / 1.25);
+    }
+
+    &__m3 {
+      padding-top: calc(61px / 1.25);
+    }
+
+    &__m4 {
+      padding-top: calc(63px / 1.25);
+    }
+  }
+}
+
 .wrapper {
   position: relative;
   // background-color: rgb(11, 48, 101);
-  background-image: url("~@/assets/NFTIllustration.gif");
+  background-image: url("~@/assets/NFTBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position-y: @layout-header-height;
 
   min-height: calc(100vh - @layout-header-height);
   overflow-x: hidden;
-}
-
-.illustration {
-  position: absolute;
-  top: 0;
-  left: 0;
 }

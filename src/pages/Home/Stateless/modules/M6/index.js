@@ -14,7 +14,28 @@ import iconTwitter from "@/assets/icon-twitter.png";
 import styles from "./index.module.less";
 
 const { Title } = Typography;
-export default () => {
+export default (props) => {
+  const firstCol = {
+    lg: {
+      offset: 2,
+      span: 4
+    },
+    xs: {
+      offset: 0,
+      span: 8
+    }
+  };
+
+  const otherCols = {
+    lg: {
+      span: 4
+    },
+    xs: {
+      offset: 0,
+      span: 8
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Row>
@@ -30,70 +51,92 @@ export default () => {
       </Row>
 
       <div className={styles.brands}>
-        <Row gutter={[70, 70]}>
-          <Col offset={2} span={4}>
+        <Row
+          gutter={[
+            {
+              lg: 70,
+              xs: 30
+            },
+            {
+              lg: 70,
+              xs: 30
+            }
+          ]}
+        >
+          <Col {...firstCol}>
             <div className={styles.brands__item}>
-              <img src={m61Image} />
+              <img className={styles.brands__img} src={m61Image} />
             </div>
           </Col>
-          <Col span={4}>
+          <Col {...otherCols}>
             <div className={styles.brands__item}>
-              <img src={m62Image} />
+              <img className={styles.brands__img} src={m62Image} />
             </div>
           </Col>
-          <Col span={4}>
+          <Col {...otherCols}>
             <div className={styles.brands__item}>
-              <img src={m63Image} />
+              <img className={styles.brands__img} src={m63Image} />
             </div>
           </Col>
-          <Col span={4}>
+          <Col {...otherCols}>
             <div className={styles.brands__item}>
-              <img src={m64Image} />
+              <img className={styles.brands__img} src={m64Image} />
             </div>
           </Col>
-          <Col span={4}>
+          <Col {...otherCols}>
             <div className={styles.brands__item}>
-              <img src={m65Image} />
+              <img className={styles.brands__img} src={m65Image} />
             </div>
           </Col>
-          <Col offset={2} span={4}>
+          <Col {...firstCol}>
             <div className={styles.brands__item}>
-              <img src={m66Image} />
+              <img className={styles.brands__img} src={m66Image} />
             </div>
           </Col>
-          <Col span={4}>
+          <Col {...otherCols}>
             <div className={styles.brands__item}>
-              <img src={m67Image} />
+              <img className={styles.brands__img} src={m67Image} />
             </div>
           </Col>
-          <Col span={4}>
+          <Col {...otherCols}>
             <div className={styles.brands__item}>
-              <img src={m68Image} />
+              <img className={styles.brands__img} src={m68Image} />
             </div>
           </Col>
-          <Col span={4}>
+          <Col {...otherCols}>
             <div className={styles.brands__item}>
-              <img src={m69Image} />
+              <img className={styles.brands__img} src={m69Image} />
             </div>
           </Col>
-          <Col span={6}>
-            <div className={styles.links}>
-              <ul>
-                <li className={styles.links__item}>
-                  <img src={iconFly} alt="" />
-                  <a href="https://t.me/MetaSpaceNetwork" target='_blank' >Telegram:https://t.me/MetaSpaceNetwork</a>
-                </li>
-                <li className={styles.links__item}>
-                  <img src={iconSmile} alt="" />
-                  <a href="http://discord.gg/fpfwyszTF4" target='_blank' >Discord:http://discord.gg/fpfwyszTF4</a>
-                </li>
-                <li className={styles.links__item}>
-                  <img src={iconTwitter} alt="" />
-                  <a href="https://twitter.com/Metaspace_Game" target='_blank' >Twitter:https://twitter.com/Metaspace_Game</a>
-                </li>
-              </ul>
-            </div>
-          </Col>
+          {props.isMobile ? null : (
+            <Col span={6}>
+              <div className={styles.links}>
+                <ul>
+                  <li className={styles.links__item}>
+                    <img src={iconFly} alt="" />
+                    <a href="https://t.me/MetaSpaceNetwork" target="_blank">
+                      Telegram:https://t.me/MetaSpaceNetwork
+                    </a>
+                  </li>
+                  <li className={styles.links__item}>
+                    <img src={iconSmile} alt="" />
+                    <a href="http://discord.gg/fpfwyszTF4" target="_blank">
+                      Discord:http://discord.gg/fpfwyszTF4
+                    </a>
+                  </li>
+                  <li className={styles.links__item}>
+                    <img src={iconTwitter} alt="" />
+                    <a
+                      href="https://twitter.com/Metaspace_Game"
+                      target="_blank"
+                    >
+                      Twitter:https://twitter.com/Metaspace_Game
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Col>
+          )}
         </Row>
       </div>
     </div>

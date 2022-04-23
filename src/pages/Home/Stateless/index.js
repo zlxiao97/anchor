@@ -11,23 +11,27 @@ export default (props) => {
   return (
     <div className={styles.wrapper}>
       <PageLayout layouts={layouts}>
-        <div key="m1">
-          <ModuleContainer
-            className={classNames(styles.module, styles["module-blue"])}
-          >
-            <M1 {...props} />
-          </ModuleContainer>
-        </div>
-        <div key="m2">
-          <ModuleContainer
-            className={classNames(styles.module, styles["module-blue"])}
-          >
-            <M3 {...props} />
-          </ModuleContainer>
-        </div>
+        {props.isMobile ? null : (
+          <div key="m1">
+            <ModuleContainer
+              className={classNames(styles.module, styles["module-blue"])}
+            >
+              <M1 {...props} />
+            </ModuleContainer>
+          </div>
+        )}
+        {props.isMobile ? null : (
+          <div key="m2">
+            <ModuleContainer
+              className={classNames(styles.module, styles["module-blue"])}
+            >
+              <M3 {...props} />
+            </ModuleContainer>
+          </div>
+        )}
         <div key="m3">
           <ModuleContainer className={styles.module}>
-            <M6 />
+            <M6 {...props} />
           </ModuleContainer>
         </div>
       </PageLayout>

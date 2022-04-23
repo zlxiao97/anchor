@@ -5,7 +5,7 @@
   margin-right: calc(@margin-lg * 3);
   align-items: center;
   &__img {
-    width: @height-lg;
+    width: @height-lg;  
     height: @height-lg;
     background: url("../../assets//logo.jpg");
     background-size: 100% 100%;
@@ -15,5 +15,19 @@
     font-size: @heading-2-size;
     margin-left: @margin-sm;
     font-weight: bolder !important;
+  }
+}
+
+@media screen and (max-width: @screen-xs) {
+  .logo {
+    margin-right: 0;
+    &__img {
+      width: @height-xs;
+      height: @height-xs;
+    }
+    &__title{
+      font-size: @font-size-lg;
+      margin-left: @margin-xss;
+    }
   }
 }

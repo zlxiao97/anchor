@@ -24,13 +24,40 @@ h6 {
   font-size: calc(@font-size-lg);
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-.ant-layout-header{
+.ant-layout-header {
   position: fixed;
-  top:0;
-  width: 100%;
+  top: 0;
+  width: 100vw;
   z-index: 9999;
 }
+
+@media screen and (max-width: @screen-md) {
+  #WEB3_CONNECT_MODAL_ID {
+    display: none;
+  }
+}
+
+@media screen and (max-width: @screen-xs) {
+  .ant-menu {
+    font-size: @font-size-sm;
+  }
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu{
+    padding: 0 @padding-xs;
+  }
+  .ant-layout-header{
+    height: 50px;
+    line-height: 50px;
+  }
+  h2.ant-typography, div.ant-typography-h2, div.ant-typography-h2 > textarea, .ant-typography h2{
+    font-size: 22px;
+  }
+  h3.ant-typography, div.ant-typography-h3, div.ant-typography-h3 > textarea, .ant-typography h3{
+    font-size: 16px;
+  }
+}
+
+

@@ -1,9 +1,11 @@
+import useMediaQuery from "@/hooks/useMediaQuery";
 import { useWeb3Context } from "@/vendors/hooks/web3-context";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default (Stateless) => (props) => {
   const navigate = useNavigate();
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("xs"));
   const {
     connect,
     disconnect,
@@ -48,11 +50,15 @@ export default (Stateless) => (props) => {
     init();
   }, []);
 
+  const data = {
+    isMobile
+  };
+
   const callback = {
     onTitleBtn1Click,
     onTitleBtn2Click,
     onMiddleBtnClick
   };
 
-  return <Stateless {...props} {...callback} />;
+  return <Stateless {...props} {...data} {...callback} />;
 };

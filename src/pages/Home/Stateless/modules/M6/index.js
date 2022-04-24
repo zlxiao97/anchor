@@ -39,7 +39,12 @@ export default (props) => {
   return (
     <div className={styles.container}>
       <Row>
-        <Col offset={6} span={12}>
+        <Col
+          lg={{
+            offset: 6,
+            span: 12
+          }}
+        >
           <Title level={2} style={{ textAlign: "center" }}>
             Partners
           </Title>

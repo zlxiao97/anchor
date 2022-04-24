@@ -11,8 +11,10 @@ export default () => {
     <Header className={styles.header}>
       <Row>
         <Col
-          offset={3}
-          span={17}
+          lg={{
+            offset: 3,
+            span: 17
+          }}
           xs={{
             offset: 0,
             span: 17

@@ -8,10 +8,26 @@ export default (props) => {
   return (
     <div className={styles.container}>
       <Row gutter={{ xxl: 75, xl: 60 }}>
-        <Col offset={4} xxl={9} xl={7}>
+        <Col
+          xxl={{
+            span: 9,
+            offset: 4
+          }}
+          xl={{
+            span: 7,
+            offset: 4
+          }}
+        >
           {/* <img src={m3Image} /> */}
         </Col>
-        <Col xxl={8} xl={10}>
+        <Col
+          xxl={{
+            span: 8
+          }}
+          xl={{
+            span: 10
+          }}
+        >
           <Title level={2}>Hold to Earn</Title>
           <Title level={4}>
             A limited NFT collection of spacecrafts where the token itself will
@@ -19,8 +35,8 @@ export default (props) => {
             it by Mystrey box at same cost to get different level of our
             spacecrafts.
           </Title>
-          <Row gutter={41} className={styles.btns}>
-            <Col span={13}>
+          <Row gutter={{ lg: 41 }} className={styles.btns}>
+            <Col lg={{ span: 13 }}>
               <Button
                 size="large"
                 type="primary"

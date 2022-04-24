@@ -32,11 +32,19 @@ export default () => {
         />
       </section>{" "}
       <section style={{ marginTop: 39 }}>
-        <Row gutter={44}>
-          <Col span={11}>
+        <Row gutter={{ lg: 44 }}>
+          <Col
+            lg={{
+              span: 11
+            }}
+          >
             <Ring />
           </Col>
-          <Col span={13}>
+          <Col
+            lg={{
+              span: 13
+            }}
+          >
             <Legends data={lengendData} />
           </Col>
         </Row>

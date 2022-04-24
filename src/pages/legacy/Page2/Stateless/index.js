@@ -39,10 +39,18 @@ export default () => {
           </section>
           <hr />
           <Row>
-            <Col span={12}>
+            <Col
+              lg={{
+                span: !2
+              }}
+            >
               <Button>button1</Button>
             </Col>
-            <Col span={12}>
+            <Col
+              lg={{
+                span: !2
+              }}
+            >
               <Button>button2</Button>
             </Col>
           </Row>

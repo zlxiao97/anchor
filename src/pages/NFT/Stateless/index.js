@@ -7,10 +7,14 @@ import M3 from "./modules/M3";
 import styles from "./index.module.less";
 import M4 from "./modules/M4";
 import NFTTitle from "@/assets/NFTTitle.png";
+import NTFVideo from "@/assets/NTFVideo.mp4";
+// import NFTIllustration from "@/assets/NFTIllustration.gif";
 
 export default (props) => {
   return (
     <>
+      {/* <img className={styles.illustration} src={NFTIllustration} /> */}
+
       <div className={styles.wrapper}>
         <PageLayout layouts={layouts}>
           <div key="m2">
@@ -49,6 +53,14 @@ export default (props) => {
           </div>
         </PageLayout>
       </div>
+      <video
+        className={styles.illustration}
+        src={NTFVideo}
+        autoPlay={true}
+        controls={false}
+        muted={true}
+        loop={true}
+      ></video>
     </>
   );
 };

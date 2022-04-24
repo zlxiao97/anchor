@@ -46,13 +46,18 @@ export default (props) => {
         </div>
       </div>
       <div className={styles.numbers}>
-        <Row gutter={[32, 32]}>
-          <Col offset={2} span={22}>
+        <Row gutter={[{ lg: 32 }, { lg: 32 }]}>
+          <Col
+            lg={{
+              offset: 2,
+              span: 22
+            }}
+          >
             <Title level={5}>Select a Number to Open Mystery Box </Title>
           </Col>
         </Row>
         <div className={styles.numbers__content}>
-          <Row gutter={[32, 32]}>
+          <Row gutter={[{ lg: 32 }, { lg: 32 }]}>
             {[
               number0Image,
               number1Image,
@@ -65,7 +70,12 @@ export default (props) => {
               number8Image,
               number9Image
             ].map((img, index) => (
-              <Col offset={index % 5 === 0 ? 2 : 0} span={4}>
+              <Col
+                lg={{
+                  offset: index % 5 === 0 ? 2 : 0,
+                  span: 4
+                }}
+              >
                 <img
                   onClick={() => props.onSelectNumber(index)}
                   className={classNames(styles.numbers__img, {

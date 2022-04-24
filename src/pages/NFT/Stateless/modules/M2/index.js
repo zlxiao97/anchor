@@ -1,23 +1,20 @@
 import styles from "./index.module.less";
 import NFTIllustration from "@/assets/NFTIllustration.gif";
-// import NFTVideo from "@/assets/NFTVideo.mov";
+// import NTFVideo from "@/assets/NTFVideo.mov";
 
 export default () => {
   return (
     <div className={styles.container}>
-      <img className={styles.illustration} src={NFTIllustration} />
+      {/* <img className={styles.illustration} src={NFTIllustration} />
+       */}
       {/* <video
-        id="video"
-        width="640"
-        height="480"
-        muted
+        className={styles.illustration}
+        src={NTFVideo}
+        width="400"
+        autoPlay={true}
         controls={false}
-        autoPlay="autoplay"
-        preload="auto"
-      >
-        <source src={NFTVideo} />
-        您的浏览器不支持 HTML5 video 标签。
-      </video> */}
+        muted={true}
+      ></video> */}
     </div>
   );
 };

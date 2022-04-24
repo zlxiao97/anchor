@@ -8,27 +8,44 @@ export default (props) => {
   return (
     <div className={styles.container}>
       <Row gutter={{ xxl: 55, xl: 44 }}>
-        <Col offset={4} xxl={8} xl={10}>
+        <Col
+          xxl={{
+            span: 8,
+            offset: 4
+          }}
+          xl={{
+            span: 10,
+            offset: 4
+          }}
+        >
           <Title>Play to Earn</Title>
           <Title level={3}>
             Join our games to win the treasure that are eligible to fly the
             spacecraft to metapsace. So select a number then hunting other coins
             in treasure!
           </Title>
-          <Row gutter={41} className={styles.btns}>
-            <Col span={13}>
+          <Row gutter={{ lg: 41 }} className={styles.btns}>
+            <Col
+              lg={{
+                span: 13
+              }}
+            >
               <Button
                 size="large"
                 type="primary"
                 className={styles.btn}
                 onClick={props.onTitleBtn1Click}
-                href='/whitepaper.pdf'
-                target='_blank'
+                href="/whitepaper.pdf"
+                target="_blank"
               >
                 White Paper
               </Button>
             </Col>
-            <Col span={11}>
+            <Col
+              lg={{
+                span: 11
+              }}
+            >
               <Button
                 size="large"
                 ghost

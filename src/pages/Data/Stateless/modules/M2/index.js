@@ -7,7 +7,7 @@ const { Title } = Typography;
 
 export default (props) => (
   <Row>
-    <Col span={8}>
+    <Col lg={{ span: 8 }}>
       <img src={dataDesc} alt="" />
       {/* <p className={styles.desc}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -32,7 +32,12 @@ export default (props) => (
         <div className={styles.data__btn}>Claim</div>
       </div>
     </Col>
-    <Col offset={2} span={14}>
+    <Col
+      lg={{
+        offset: 2,
+        span: 14
+      }}
+    >
       <div className={styles.boxs}>
         {new Array(10).fill(null).map((item, index) => (
           <div

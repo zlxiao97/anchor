@@ -9,3 +9,18 @@
 .container {
   margin-top: calc(@margin-lg * 3.7);
 }
+
+
+
+@media screen and (max-width: @screen-xs) {
+  .container {
+    margin-top: 50px;
+    padding: 0 @padding-lg;
+    h2 {
+      text-align: center;
+    }
+  }
+  .btns {
+    margin-top: @margin-lg;
+  }
+}

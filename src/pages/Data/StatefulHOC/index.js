@@ -3,6 +3,7 @@ import PubSub from "pubsub-js";
 import { useWeb3Context } from "@/vendors/hooks/web3-context";
 import useStates from "@/hooks/useStates";
 import reducer from "./utils/reducer";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 // import CardJson from "../../../artifacts/contracts/OpenCard.sol/OpenCard.json";
 // import MetaJson from "../../../artifacts/contracts/online/Meta.json";
@@ -156,6 +157,7 @@ export default (Stateless) => (props) => {
     console.log("init");
     dispatch({ type: "init", payload: provider });
   };
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("xs"));
 
   useEffect(() => {
     init();
@@ -167,6 +169,6 @@ export default (Stateless) => (props) => {
     onSelectNumber: setSelected
   };
   return (
-    <Stateless {...props} selected={selected} state={state} {...callback} />
+    <Stateless {...props} selected={selected} state={state} {...callback} isMobile={isMobile} />
   );
 };

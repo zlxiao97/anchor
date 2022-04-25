@@ -24,10 +24,15 @@ export default (props) => {
             spacecraft to metapsace. So select a number then hunting other coins
             in treasure!
           </Title>
-          <Row gutter={{ lg: 41 }} className={styles.btns}>
+          <Row gutter={{ lg: 41, xs: 20 }} className={styles.btns}>
             <Col
               lg={{
+                offset: 0,
                 span: 13
+              }}
+              xs={{
+                span: 8,
+                offset: 3
               }}
             >
               <Button
@@ -43,7 +48,12 @@ export default (props) => {
             </Col>
             <Col
               lg={{
+                offset: 0,
                 span: 11
+              }}
+              xs={{
+                span: 8,
+                offset: 1
               }}
             >
               <Button

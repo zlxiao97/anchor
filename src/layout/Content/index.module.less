@@ -1,21 +1,16 @@
 .siteLayout {
   &__content {
     // max-width: @screen-1k;
-    min-height: calc(
-      100vh - @layout-header-height - @layout-footer-padding-y * 2
-    );
+    min-height: calc(100vh - @layout-header-height);
     margin: 0 auto;
     padding-top: @layout-header-height;
   }
 }
 
-
 @media screen and (max-width: @screen-md) {
   .siteLayout {
     &__content {
-      min-height: calc(
-        100vh - 50px - @layout-footer-padding-y * 2
-      );
+      min-height: calc(100vh - 50px);
       padding-top: 50px;
     }
   }

@@ -8,16 +8,26 @@ import styles from "./index.module.less";
 export default (props) => {
   return (
     <>
-      <PageLayout layouts={layouts} className={styles.layout}>
+      <PageLayout layouts={layouts}>
         <div key="m1">
-          <ModuleContainer className={styles.module}>
-            <Introduce />
-          </ModuleContainer>
+          <div className={styles.m1}>
+            <ModuleContainer
+              className={styles.module}
+              contentClassName={styles.module__m1}
+            >
+              <Introduce {...props} />
+            </ModuleContainer>
+          </div>
         </div>
         <div key="m2">
-          <ModuleContainer className={styles.module}>
-            <Form {...props} />
-          </ModuleContainer>
+          <div className={styles.m2}>
+            <ModuleContainer
+              className={styles.module}
+              contentClassName={styles.module__m2}
+            >
+              <Form {...props} />
+            </ModuleContainer>
+          </div>
         </div>
       </PageLayout>
     </>

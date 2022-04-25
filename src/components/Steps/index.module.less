@@ -31,3 +31,43 @@
     line-height: @line-height-base;
   }
 }
+
+@media screen and (max-width: @screen-xs) {
+  .steps {
+    row-gap: @margin-sm;
+  }
+
+  .step {
+    &__no {
+      width: calc(@font-size-sm * @line-height-base);
+      height: calc(@font-size-sm * @line-height-base);
+      margin-right: @margin-xs;
+      font-size: @font-size-sm;
+      border-radius: 3px;
+    }
+
+    &__desc {
+      margin-top: @margin-sm;
+      font-size: @font-size-sm;
+    }
+  }
+}
+
+@media screen and (min-width: @screen-xs) and (max-width: @screen-xxl)  {
+  .steps {
+    row-gap: @margin-lg;
+  }
+  .step {
+    &__no {
+      width: calc(@font-size-base * @line-height-base);
+      height: calc(@font-size-base * @line-height-base);
+      margin-right: @margin-md;
+      font-size: @font-size-base;
+    }
+
+    &__desc {
+      margin-top: @margin-sm;
+      font-size: @font-size-base;
+    }
+  }
+}

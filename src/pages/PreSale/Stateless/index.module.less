@@ -1,8 +1,46 @@
-.layout {
-  padding-top: calc(@padding-lg * 6);
-}
-
 .module {
   border-radius: 20px;
   box-shadow: rgb(218 218 222) 1px 1px 2px, rgb(255 255 255) -1px -1px 2px;
+  height: 100%;
+
+  &__m1 {
+    height: 100%;
+  }
+
+  &__m2 {
+    height: 100%;
+  }
+}
+
+.m1 {
+  padding: 100px 0 0 100px;
+  height: calc(100% - 100px);
+}
+
+.m2 {
+  padding: 100px 100px 0 100px;
+  height: calc(100% - 100px);
+}
+@media screen and (min-width: @screen-xs) and (max-width: @screen-xxl)  {
+  .m1 {
+    padding: 80px 0 0 80px;
+    height: calc(100% - 80px);
+  }
+
+  .m2 {
+    padding: 80px 100px 0 100px;
+    height: calc(100% - 80px);
+  }
+}
+
+@media screen and (max-width: @screen-xs) {
+  .m1 {
+    padding: 20px 32px 0 32px;
+    height: calc(100% - 20px);
+  }
+
+  .m2 {
+    padding: 20px 32px 0 32px;
+    height: calc(100% - 20px);
+  }
 }

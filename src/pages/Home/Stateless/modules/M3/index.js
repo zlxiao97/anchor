@@ -36,7 +36,7 @@ export default (props) => {
             spacecrafts.
           </Title>
           <Row gutter={{ lg: 41 }} className={styles.btns}>
-            <Col lg={{ span: 13 }}>
+            <Col lg={{ span: 13 }} xs={{ span: 8 }}>
               <Button
                 size="large"
                 type="primary"

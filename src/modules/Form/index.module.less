@@ -37,3 +37,21 @@
     // }
   }
 }
+
+@media screen and (max-width: @screen-xs) {
+  .form {
+    :global {
+      .ant-input-affix-wrapper {
+        border-radius: 5px;
+      }
+      .ant-form-item-control-input-content{
+        text-align: center;
+      }
+    }
+
+    &__btn {
+      width: 85%;
+      margin-top: @margin-md;
+    }
+  }
+}

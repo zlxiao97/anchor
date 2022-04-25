@@ -14,7 +14,6 @@ export default (props) => {
   return (
     <>
       {/* <img className={styles.illustration} src={NFTIllustration} /> */}
-
       <div className={styles.wrapper}>
         <PageLayout layouts={layouts}>
           <div key="m2">
@@ -30,7 +29,7 @@ export default (props) => {
               className={styles.module}
               contentClassName={styles.module__m1}
             >
-              <img src={NFTTitle} />
+              <img className={styles.m1Img} src={NFTTitle} />
             </ModuleContainer>
           </div>
 

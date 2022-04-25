@@ -49,7 +49,7 @@
   }
 }
 
-@media screen and (max-width: @screen-xxl) {
+@media screen and (min-width: @screen-xs) and (max-width: @screen-xxl)  {
   .module {
     &__m1 {
       padding-top: calc(53px / 1.25);
@@ -91,3 +91,32 @@
   transform: translateX(-50%);
 }
 
+@media screen and (max-width: @screen-xs) {
+  .m1Img {
+    width: 157px;
+    height: 30px !important;
+  }
+  .module {
+    &__m1 {
+      padding-top: 30px;
+    }
+
+    &__m2 {
+      padding-top: 33px;
+    }
+
+    &__m3 {
+      padding-top: 30px;
+    }
+
+    &__m4 {
+      width: 220px;
+      padding-top: 35px;
+    }
+  }
+
+  .illustration {
+    width: 500px;
+    top: 7.5vh;
+  }
+}

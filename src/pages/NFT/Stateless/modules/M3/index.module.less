@@ -33,3 +33,40 @@
   cursor: pointer;
   pointer-events: all !important;
 }
+
+@media screen and (max-width: @screen-xs) {
+  .container {
+    :global{
+      .ant-form-inline .ant-form-item{
+        margin-right: 6px !important;
+      }
+    }
+    &__btn {
+      width: 40px !important;
+      height: 24px !important;
+      line-height: 24px !important;
+      font-size: 12px !important;
+      padding: 0px !important;
+    }
+    &__input {
+      :global(.ant-input) {
+        font-size: 18px !important;
+      }
+      padding: 0px 5px !important;
+      width: 84px !important;
+      height: 22px !important;
+      border: 1px solid #000000 !important;
+    }
+    &__info {
+      margin-top: 8px;
+      margin-bottom: 0;
+      font-size: 10px;
+    }
+  }
+
+  .icon {
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+  }
+}

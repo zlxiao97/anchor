@@ -4,11 +4,12 @@
     "desc": "Connect your wallet address via the Connect Wallet button in the upper right corner"
   },
   {
-    "title": "Approve usdt ",
-    "desc": "Click the Approve button to enable the protocol to obtain wallet transaction permissions"
+    "title": "Approve and Join Presale ",
+    "desc": "Click the Approve button and verify, then fill in the amount of USDT to Click Join PreSale"
   },
   {
-    "title": "Join Presale ",
-    "desc": "Fill in the amount of USDT, and the amount of meta obtained will be automatically displayed. Click Join PreSale and confirm to complete the purchase"
+    "title": "Address ",
+    "desc": "META: 0xC66e2EcC7900E179a899A594ef9Cc104A8792bB6" 
   }
 ]
+

@@ -10,7 +10,7 @@ const Boxs = (props) => {
   return (
     <>
       <div className={styles.boxs}>
-        {new Array(isMobile ? 3 : 10).fill(null).map((item, index) => (
+        {new Array(isMobile ? 6 : 10).fill(null).map((item, index) => (
           <div
             onClick={() => props.onSelectNumber(index)}
             className={classNames({

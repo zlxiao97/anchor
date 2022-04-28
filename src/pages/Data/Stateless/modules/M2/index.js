@@ -38,7 +38,7 @@ const Earn = (props) => {
           tempor incididunt ut labore et dolore magna aliqua.
         </p> */}
       <div className={styles.data}>
-        <Title level={4}>EARN</Title>
+        <div className={styles.data__rule} level={4}>RULE: <br></br> 1. Cost 500 META to select a card <br></br> 2. Get other coins as reward </div>
         <ul className={styles.data__list}>
           <li>
             <Title level={4}>ETH: {props.state.eth}</Title>

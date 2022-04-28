@@ -18,7 +18,7 @@ export default () => {
             />
           </Form.Item>
           <Form.Item>
-            <Button className={styles.container__btn}>max</Button>
+            <Button className={styles.container__btn}>Mint</Button>
           </Form.Item>
         </Form>
         <p className={styles.container__info}>Please contact your wallet</p>

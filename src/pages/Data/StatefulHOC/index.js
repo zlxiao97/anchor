@@ -67,19 +67,8 @@ export default (Stateless) => (props) => {
    * 用户点击 OPEN 按钮
    */
   const onOpen = async () => {
-    // for demo
     if (selected !== undefined) {      
       const number = Math.round(Math.random() * 4)
-      console.log(number)
-      if (number == 0) {
-        state.eth += 0.1;
-      } else if (number == 1) {
-        state.bnb += 1;
-      } else if (number == 2) {
-        state.usdt += 100;
-      } else {
-        state.doge += 500;
-      }
       //播放动画
       PubSub.publish("OPEN BOX", {
         selected,
@@ -98,6 +87,38 @@ export default (Stateless) => (props) => {
         }
       });
     }
+
+    // for demo
+    // if (selected !== undefined) {      
+    //   const number = Math.round(Math.random() * 4)
+    //   console.log(number)
+    //   if (number == 0) {
+    //     state.eth += 0.1;
+    //   } else if (number == 1) {
+    //     state.bnb += 1;
+    //   } else if (number == 2) {
+    //     state.usdt += 100;
+    //   } else {
+    //     state.doge += 500;
+    //   }
+    //   //播放动画
+    //   PubSub.publish("OPEN BOX", {
+    //     selected,
+    //     isWin: true, // todo: 对接接口
+    //     onFinish() {
+    //       // 动画播放完毕后执行
+    //       dispatch({
+    //         type: "open",
+    //         payload: {
+    //           eth: state.eth,
+    //           bnb: state.bnb,
+    //           usdt: state.usdt,
+    //           doge: state.doge
+    //         }
+    //       });
+    //     }
+    //   });
+    // }
 
 
     // if (selected !== undefined) {

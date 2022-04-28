@@ -8,7 +8,7 @@ import styles from "./index.module.less";
 import M4 from "./modules/M4";
 import NFTTitle from "@/assets/NFTTitle.png";
 import NTFVideo from "@/assets/NTFVideo.mp4";
-// import NFTIllustration from "@/assets/NFTIllustration.gif";
+import NFTIllustration from "@/assets/NFTIllustration.png";
 
 export default (props) => {
   return (
@@ -52,14 +52,18 @@ export default (props) => {
           </div>
         </PageLayout>
       </div>
-      <video
-        className={styles.illustration}
-        src={NTFVideo}
-        autoPlay={true}
-        controls={false}
-        muted={true}
-        loop={true}
-      ></video>
+      {props.isMobile ? (
+        <img className={styles.illustration} src={NFTIllustration} />
+      ) : (
+        <video
+          className={styles.illustration}
+          src={NTFVideo}
+          autoPlay={true}
+          controls={false}
+          muted={true}
+          loop={true}
+        ></video>
+      )}
     </>
   );
 };

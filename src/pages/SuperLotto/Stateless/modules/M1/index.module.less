@@ -1,0 +1,172 @@
+.container {
+  position: relative;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.award {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  :global {
+    .ant-typography {
+      color: #ffd800 !important;
+      font-weight: 300;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
+  button {
+    border-radius: 10px;
+    height: 39px;
+    line-height: 39px;
+    padding: 0 15px;
+  }
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  &__content {
+    width: 386px;
+    height: 175px;
+    padding: 16px 20px;
+    // border: 2px solid white;
+    background-image: url("~@/assets/lotooBox.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &__tip {
+    color: white;
+    font-size: @font-size-lg;
+  }
+  &__input {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  &__input input {
+    width: 76px;
+    height: 47px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 0.3rem;
+    text-align: center;
+  }
+  &__check {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+    cursor: pointer;
+  }
+
+  &__checkBtn {
+    width: 148px;
+    height: 23px;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    background-image: url("~@/assets/check.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.winText {
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+}
+
+.winNumber {
+  display: flex;
+  justify-content: center;
+  margin-top: 11px;
+  margin-bottom: 29px;
+  &__ball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 73px;
+    height: 72px;
+    font-size: 36px;
+    font-weight: bolder;
+    background-image: url("~@/assets/winNumberBg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@media screen and (min-width: @screen-xs) and (max-width: @screen-xxl) {
+  .title {
+    img {
+      width: 300px;
+      height: 40px;
+    }
+  }
+  .btns {
+    padding: 0 140px;
+    button {
+      border-radius: 10px;
+      height: 26px;
+      line-height: 26px;
+      padding: 0 10px;
+    }
+  }
+
+  .box {
+    margin-top: 28px;
+    &__content {
+      width: 320px;
+      height: 140px;
+      padding: 10px 15px;
+    }
+    &__input {
+      margin-top: 16px;
+    }
+    &__input input {
+      width: 56px;
+      height: 38px;
+      border: 1px solid white;
+      font-size: 24px;
+    }
+    &__check {
+      margin-top: 16px;
+    }
+    &__checkBtn {
+      width: 120px;
+      height: 20px;
+      font-weight: bold;
+      font-size: @font-size-sm;
+    }
+  }
+
+  
+.winText {
+  margin-top: 12px;
+}
+
+.winNumber {
+  margin-top: 7px;
+  &__ball {
+    font-size: 32px;
+  }
+}
+}

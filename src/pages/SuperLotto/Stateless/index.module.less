@@ -1,0 +1,47 @@
+.module {
+  height: 100%;
+  background-color: transparent !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: @white !important;
+  }
+
+  .m1 {
+    padding: 49px 720px 0 758px;
+  }
+
+  .m2 {
+    padding: 44px 720px 0 758px;
+  }
+}
+
+.wrapper {
+  height: 100%;
+  background-image: url("../../../assets/lottoBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.hr{
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (min-width: @screen-xs) and (max-width: @screen-xxl)  {
+  .module {
+    .m1 {
+      padding: 20px 400px 0 400px;
+    }
+  
+    .m2 {
+      padding: 36px 400px 0 400px;
+    }
+  }
+}

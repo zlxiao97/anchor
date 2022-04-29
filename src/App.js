@@ -5,6 +5,11 @@ import Layout from "@/layout/Layout";
 import useHomePage from "@/hooks/useHomePage";
 import "./global.less";
 import FullScreenAnimate from "./components/FullScreenAnimate";
+import { message } from "antd";
+
+message.config({
+  top: 150,
+});
 
 export default () => {
   useHomePage(homePath);

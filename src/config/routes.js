@@ -25,20 +25,20 @@ export default [
     component: require("../pages/Data").default
   },
   {
-    name: "NFT", 
+    name: "NFT",
     path: "nft",
     component: require("../pages/NFT").default
   },
   {
-    name: "SuperLotto", 
+    name: "SuperLotto",
     path: "supperlotto",
-    // component: require("../pages/Home").default
-    onClick: () => {
-      message.info("coming soon");
-    }
+    component: require("../pages/SuperLotto").default
+    // onClick: () => {
+    //   message.info("coming soon");
+    // }
   },
   {
-    name: "Market", 
+    name: "Market",
     path: "market",
     onClick: () => {
       message.info("coming soon");

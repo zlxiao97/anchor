@@ -21,8 +21,12 @@ export default (props) => {
           format="mm [mins] ss [sec]"
           valueStyle={{
             color: "white",
-            fontSize: props.isNoteBook ? "1.5rem" : "2rem",
-            letterSpacing: "0.2rem"
+            fontSize: props.isNoteBook
+              ? "1.5rem"
+              : props.isMobile
+              ? "1rem"
+              : "2rem",
+            letterSpacing: props.isMobile ? "0.1rem" : "0.2rem"
           }}
           onFinish={props.onQuickLottoCountDown}
         />

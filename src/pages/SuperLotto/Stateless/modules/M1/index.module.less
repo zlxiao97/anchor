@@ -158,15 +158,93 @@
     }
   }
 
-  
-.winText {
-  margin-top: 12px;
-}
+  .winText {
+    margin-top: 12px;
+  }
 
-.winNumber {
-  margin-top: 7px;
-  &__ball {
-    font-size: 32px;
+  .winNumber {
+    margin-top: 7px;
+    &__ball {
+      font-size: 32px;
+    }
   }
 }
+
+@media screen and (max-width: @screen-xs) {
+  .title {
+    img {
+      width: 220px;
+      height: 30px;
+    }
+  }
+  .btns {
+    padding: 0 60px;
+    button {
+      border-radius: 5px;
+      height: 18px;
+      line-height: 18px;
+      padding: 0 6px;
+      font-size: 10px;
+    }
+  }
+
+  .award {
+    margin-top: 5px;
+    :global {
+      .ant-typography {
+        font-size: 34px;
+      }
+    }
+  }
+
+  .countdown {
+    margin-top: 10px;
+  }
+
+  .box {
+    margin-top: 28px;
+    &__tip {
+      font-size: 10px;
+    }
+    &__content {
+      width: 166px;
+      height: 80px;
+      padding: 4px 8px;
+    }
+    &__input {
+      margin-top: 6px;
+    }
+    &__input input {
+      width: 40px;
+      height: 20px;
+      border: 1px solid white;
+      font-size: 12px;
+      padding: 0 5px;
+    }
+    &__check {
+      margin-top: 6px;
+    }
+    &__checkBtn {
+      width: 100px;
+      height: 14px;
+      font-weight: normal;
+      font-size: 10px;
+    }
+  }
+
+  .winText {
+    margin-top: 12px;
+    h5 {
+      font-size: 14px !important;
+    }
+  }
+
+  .winNumber {
+    margin-top: 7px;
+    &__ball {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+    }
+  }
 }

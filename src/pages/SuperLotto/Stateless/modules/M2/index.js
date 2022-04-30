@@ -22,7 +22,11 @@ export default (props) => {
           format="D [day] HH [Hours] mm [mins] ss [sec]"
           valueStyle={{
             color: "white",
-            fontSize: props.isNoteBook ? "1rem" : "1.2rem",
+            fontSize: props.isNoteBook
+              ? "1rem"
+              : props.isMobile
+              ? "0.8rem"
+              : "1.2rem",
             fontWeight: "bolder",
             letterSpacing: props.isNoteBook ? "0.03rem" : "0.05rem"
           }}

@@ -12,11 +12,11 @@
   }
 
   .m1 {
-    padding: 49px 720px 0 758px;
+    padding: 49px 37.83% 0 39.83%;
   }
 
   .m2 {
-    padding: 44px 720px 0 758px;
+    padding: 44px 37.83% 0 39.83%;
   }
 }
 
@@ -29,19 +29,37 @@
   background-position: center;
 }
 
-.hr{
+.hr {
   position: absolute;
   bottom: 0;
 }
 
-@media screen and (min-width: @screen-xs) and (max-width: @screen-xxl)  {
+@media screen and (min-width: @screen-xs) and (max-width: @screen-xxl) {
   .module {
     .m1 {
-      padding: 20px 400px 0 400px;
+      padding: 20px 31.67% 0 31.67%;
     }
-  
+
     .m2 {
-      padding: 36px 400px 0 400px;
+      padding: 36px 31.67% 0 31.67%;
     }
+  }
+}
+
+@media screen and (max-width: @screen-xs) {
+  .module {
+    .m1 {
+      padding: 40px 15.38% 0 15.38%;
+    }
+
+    .m2 {
+      padding: 33px 15.38% 0 15.38%;
+    }
+  }
+
+  .hr {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
   }
 }

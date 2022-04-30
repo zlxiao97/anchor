@@ -8,7 +8,7 @@ import FullScreenAnimate from "./components/FullScreenAnimate";
 import { message } from "antd";
 
 message.config({
-  top: 150,
+  top: '10%',
 });
 
 export default () => {

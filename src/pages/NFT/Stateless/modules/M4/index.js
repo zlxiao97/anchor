@@ -4,13 +4,33 @@ import NFTBox2 from "@/assets/NFTBox2.png";
 import NFTBox3 from "@/assets/NFTBox3.png";
 import NFTBox4 from "@/assets/NFTBox4.png";
 
-export default () => {
+export default (props) => {
   return (
     <div className={styles.container}>
-      <img className={styles.container__item} src={NFTBox1} />
-      <img className={styles.container__item} src={NFTBox2} />
-      <img className={styles.container__item} src={NFTBox3} />
-      <img className={styles.container__item} src={NFTBox4} />
+      <div className={styles.container__item}>
+        <img src={NFTBox1} />
+        <span className={styles.container__number}>
+          number:{props.numbers[0]}
+        </span>
+      </div>
+      <div className={styles.container__item}>
+        <img src={NFTBox2} />
+        <span className={styles.container__number}>
+          number:{props.numbers[1]}
+        </span>
+      </div>
+      <div className={styles.container__item}>
+        <img src={NFTBox3} />
+        <span className={styles.container__number}>
+          number:{props.numbers[2]}
+        </span>
+      </div>
+      <div className={styles.container__item}>
+        <img src={NFTBox4} />
+        <span className={styles.container__number}>
+          number:{props.numbers[3]}
+        </span>
+      </div>
     </div>
   );
 };

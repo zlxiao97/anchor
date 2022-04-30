@@ -31,6 +31,9 @@ export default (props) => {
           number:{props.numbers[3]}
         </span>
       </div>
+      <div className={styles.container__border}>
+        <span>Account assets</span>
+      </div>
     </div>
   );
 };

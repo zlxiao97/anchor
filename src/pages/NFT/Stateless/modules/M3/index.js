@@ -5,7 +5,7 @@ import styles from "./index.module.less";
 
 const IconImage = ({ src }) => <img className={styles.icon} src={src} />;
 
-export default () => {
+export default (props) => {
   return (
     <div className={styles.container}>
       <div>
@@ -18,7 +18,10 @@ export default () => {
             />
           </Form.Item>
           <Form.Item>
-            <Button className={styles.container__btn}>Mint</Button>
+            <Button 
+              className={styles.container__btn}
+              onClick={props.userMint}
+            >Mint</Button>
           </Form.Item>
         </Form>
         <p className={styles.container__info}>Please contact your wallet</p>

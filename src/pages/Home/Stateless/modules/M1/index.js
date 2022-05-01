@@ -1,6 +1,7 @@
 import { Button, Col, Row, Typography } from "antd";
 import m1Image from "@/assets/m1.png";
 import styles from "./index.module.less";
+import { size } from "lodash";
 
 const { Title } = Typography;
 
@@ -19,9 +20,11 @@ export default (props) => {
           }}
         >
           <div style={{ textAlign: "center" }}>
-            <a href="https://t.me/MetaSpaceNetworkChina">
-              https://t.me/MetaSpaceNetworkChina
-            </a>
+            <div style={{fontSize:"30px"}}>
+              <a href="https://t.me/MetaSpaceNetworkChina">
+                telegram link: https://t.me/MetaSpaceNetworkChina
+              </a>
+            </div>
           </div>
           <Title>Play to Earn</Title>
           <Title level={3}>

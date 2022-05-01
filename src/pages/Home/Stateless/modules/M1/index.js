@@ -18,6 +18,11 @@ export default (props) => {
             offset: 4
           }}
         >
+          <div style={{ textAlign: "center" }}>
+            <a href="https://t.me/MetaSpaceNetworkChina">
+              https://t.me/MetaSpaceNetworkChina
+            </a>
+          </div>
           <Title>Play to Earn</Title>
           <Title level={3}>
             Join our games to win the treasure that are eligible to fly the

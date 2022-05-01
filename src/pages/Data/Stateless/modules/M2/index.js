@@ -38,7 +38,12 @@ const Earn = (props) => {
           tempor incididunt ut labore et dolore magna aliqua.
         </p> */}
       <div className={styles.data}>
-        <div className={styles.data__rule} level={4}>RULE: <br></br> 1. Cost 500 META to select a card <br></br> 2. Get other coins as reward </div>
+        {!props.isMobile ? (
+          <div className={styles.data__rule} level={4}>
+            RULE: <br></br> 1. Cost 500 META to select a card <br></br> 2. Get
+            other coins as reward{" "}
+          </div>
+        ) : null}
         <ul className={styles.data__list}>
           <li>
             <Title level={4}>ETH: {props.state.eth}</Title>
@@ -55,6 +60,15 @@ const Earn = (props) => {
         </ul>
         <div className={styles.data__btn}>Claim</div>
       </div>
+      {props.isMobile ? (
+        <div style={{ marginTop: "1rem" }}>
+          <p>Rule:</p>
+          <ol>
+            <li>Cost 500 META to select a card</li>
+            <li>Get other coins as reward</li>
+          </ol>
+        </div>
+      ) : null}
     </>
   );
 };

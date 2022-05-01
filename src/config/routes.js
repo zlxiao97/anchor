@@ -14,11 +14,11 @@ export default [
     path: "home",
     component: require("../pages/Home").default
   },
-  {
-    name: "PreSale",
-    path: "preSale",
-    component: require("../pages/PreSale").default
-  },
+  // {
+  //   name: "PreSale",
+  //   path: "preSale",
+  //   component: require("../pages/PreSale").default
+  // },
   {
     name: "Play",
     path: "data",
@@ -29,14 +29,14 @@ export default [
     path: "nft",
     component: require("../pages/NFT").default
   },
-  {
-    name: "SuperLotto",
-    path: "supperlotto",
-    component: require("../pages/SuperLotto").default
-    // onClick: () => {
-    //   message.info("coming soon");
-    // }
-  },
+  // {
+  //   name: "SuperLotto",
+  //   path: "supperlotto",
+  //   component: require("../pages/SuperLotto").default
+  //   // onClick: () => {
+  //   //   message.info("coming soon");
+  //   // }
+  // },
   {
     name: "Market",
     path: "market",

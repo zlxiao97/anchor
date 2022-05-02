@@ -33,8 +33,10 @@ export default (Stateless) => (props) => {
    * 用户点击 Mint 按钮
    */
   const userMint = async () => {
-    const values = form.getFieldsValue(); // values.count 是用户输入的数量
-    console.log(values);
+    if (!connected) {
+      Modal.warning({ title: "Connect your wallet first!" });
+      console.log("Connect your wallet first!");
+    }
     var tx;
     try {
       tx = await nft.userMint({

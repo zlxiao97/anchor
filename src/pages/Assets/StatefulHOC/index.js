@@ -10,9 +10,41 @@ import { NFT_ADDRESS } from "@/config/web3";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { get } from "lodash";
 
+const mockCardData = [
+  {
+    level: 1,
+    attack: 1,
+    defense: 1,
+    flexible: 1,
+    durability: 1
+  },
+  {
+    level: 1,
+    attack: 1,
+    defense: 1,
+    flexible: 1,
+    durability: 1
+  },
+  {
+    level: 1,
+    attack: 1,
+    defense: 1,
+    flexible: 1,
+    durability: 1
+  },
+  {
+    level: 1,
+    attack: 1,
+    defense: 1,
+    flexible: 1,
+    durability: 1
+  }
+];
+
 export default (Stateless) => (props) => {
-  const [form] = Form.useForm();
-  const [numbers, setNumbers] = useState([0, 0, 0, 0]);
+  const [activationCode, setActivationCode] = useState();
+  const [createCode, setCreateCode] = useState();
+  const [cards, setCards] = useState([]);
   const {
     connect,
     disconnect,
@@ -25,65 +57,45 @@ export default (Stateless) => (props) => {
     providerChainID
   } = useWeb3Context();
 
-  const [isValid, onValuesChange] = useFormValidate(form);
   const signer = provider.getSigner();
   const nft = new ethers.Contract(NFT_ADDRESS, NFTJson["abi"], signer);
 
   /**
-   * 用户点击 Mint 按钮
-   */
-  const userMint = async () => {
-    const values = form.getFieldsValue(); // values.count 是用户输入的数量
-    console.log(values);
-    var tx;
-    try {
-      tx = await nft.userMint({
-        gasPrice: 20000000000,
-        gasLimit: 2000000,
-        value: "500000000000000000"
-      });
-      await tx.wait();
-    } catch (e) {
-      if ("account" in e) {
-        Modal.warning({ title: "Please connect your wallet" });
-      } else if (e["data"]["message"].search("All nft has been sold.") != -1) {
-        Modal.warning({ title: "All nft has been sold." });
-      }
-    }
-  };
-
-  /**
-   * 页面初始化，可以在这里初始化卡片的数量
+   * 页面初始化，可以在这里初始化卡片数据
    */
   const init = async () => {
     console.log("init");
-    setNumbers([1, 0, 0, 0]); // 从接口获取卡片数量
+    setCards(mockCardData);
   };
 
   /**
-   * 用户点击减号
+   * 用户输入 ActivationCode
    */
-  const substractCount = () => {
-    const values = form.getFieldsValue();
-    const count = +get(values, "count", 0);
-    if (!Number.isNaN(count))
-      form.setFieldsValue({
-        ...values,
-        count: count - 1
-      });
+  const onActivationCodeChange = (e) => {
+    const value = e.target.value;
+    setActivationCode(value);
   };
 
   /**
-   * 用户点击加号
+   * 用户输入 createCode
    */
-  const addCount = () => {
-    const values = form.getFieldsValue();
-    const count = +get(values, "count", 0);
-    if (!Number.isNaN(count))
-      form.setFieldsValue({
-        ...values,
-        count: count + 1
-      });
+  const onCreateCodeChange = (e) => {
+    const value = e.target.value;
+    setCreateCode(value);
+  };
+
+  /**
+   * 用户点击 Submit
+   */
+  const onSubmitClick = () => {
+    console.log(activationCode);
+  };
+
+  /**
+   * 用户点击 Get
+   */
+  const onGetClick = () => {
+    console.log(createCode);
   };
 
   useEffect(() => {
@@ -93,16 +105,16 @@ export default (Stateless) => (props) => {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("xs"));
 
   const data = {
-    form,
-    isValid,
     isMobile,
-    numbers
+    cards,
+    activationCode,
+    createCode
   };
   const callback = {
-    onValuesChange,
-    userMint,
-    addCount,
-    substractCount
+    onActivationCodeChange,
+    onCreateCodeChange,
+    onSubmitClick,
+    onGetClick
   };
   return <Stateless {...props} {...data} {...callback} />;
 };

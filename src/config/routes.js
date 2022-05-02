@@ -20,7 +20,7 @@ export default [
   //   component: require("../pages/PreSale").default
   // },
   {
-    name: "SpaceShip",
+    name: "NFT",
     path: "nft",
     component: require("../pages/NFT").default
   },
@@ -54,12 +54,9 @@ export default [
     // component: require("../pages/Home").default
   },
   {
-    name: "Earn",
-    path: "eran",
-    onClick: () => {
-      message.info("coming soon");
-    }
-    // component: require("../pages/Home").default
+    name: "Assets",
+    path: "assets",
+    component: require("../pages/Assets").default
   },
   {
     name: "Docs",

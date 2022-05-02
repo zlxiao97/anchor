@@ -32,7 +32,7 @@ export default (props) => {
         </span>
       </div>
       <div className={styles.container__border}>
-        <span>SpaceShip Types</span>
+        <span>SpaceShip Assets</span>
       </div>
     </div>
   );

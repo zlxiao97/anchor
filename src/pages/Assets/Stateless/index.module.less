@@ -14,62 +14,22 @@
   h6,
   p,
   li,
-  div {
+  span {
     color: @white !important;
   }
 
-  &__m1 {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    padding-top: 53px;
-    padding-bottom: 0;
-    img {
-      height: 100%;
-    }
-  }
-
-  &__m2 {
-    padding-top: 59px;
-    padding-bottom: 0;
-    height: 100%;
-  }
-
   &__m3 {
-    padding: 0;
-    padding-top: 61px;
+    width: 60%;
+    margin: 0 auto;
     height: 100%;
-    margin-top: 80px;
-    margin-right: 500px;
+    padding-top: 100px;
   }
 
   &__m4 {
-    width: 834px;
+    width: 60%;
     margin: 0 auto;
-    margin-top: 200px;
-    padding: 0;
-    padding-top: 63px;
     height: 100%;
-  }
-}
-
-@media screen and (min-width: @screen-xs) and (max-width: @screen-xxl) {
-  .module {
-    &__m1 {
-      padding-top: calc(53px / 1.25);
-    }
-
-    &__m2 {
-      padding-top: calc(59px / 1.25);
-    }
-
-    &__m3 {
-      padding-top: calc(61px / 1.25);
-    }
-
-    &__m4 {
-      padding-top: calc(63px / 1.25);
-    }
+    padding-top: 0;
   }
 }
 
@@ -81,47 +41,28 @@
   background-size: cover;
   background-attachment: fixed;
 
-  min-height: calc(100vh - @layout-header-height);
   overflow-x: hidden;
+  height: 100%;
 }
 
-.illustration {
-  position: absolute;
-  top: 13vh;
-  left: 50vw;
-  width: 50vw;
-  mix-blend-mode: screen;
-  object-fit: cover;
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-
-@media screen and (max-width: @screen-xs) {
-  .m1Img {
-    width: 157px;
-    height: 30px !important;
-  }
+@media screen and (min-width: @screen-xs) and (max-width: @screen-xxl) {
   .module {
-    &__m1 {
-      padding-top: 30px;
-    }
-
-    &__m2 {
-      padding-top: 33px;
-    }
-
     &__m3 {
       padding-top: 30px;
     }
+  }
+}
+
+@media screen and (max-width: @screen-xs) {
+  .module {
+    &__m3 {
+      width: 95%;
+      padding-top: 10px;
+    }
 
     &__m4 {
-      width: 220px;
-      padding-top: 35px;
+      width: 95%;
+      padding-top: 0;
     }
-  }
-
-  .illustration {
-    width: 500px;
-    top: 7.5vh;
   }
 }

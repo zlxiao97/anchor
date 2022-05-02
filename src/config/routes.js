@@ -20,12 +20,7 @@ export default [
   //   component: require("../pages/PreSale").default
   // },
   {
-    name: "Play",
-    path: "data",
-    component: require("../pages/Data").default
-  },
-  {
-    name: "NFT",
+    name: "SpaceShip",
     path: "nft",
     component: require("../pages/NFT").default
   },
@@ -38,13 +33,42 @@ export default [
   //   // }
   // },
   {
+    name: "Card",
+    path: "data",
+    component: require("../pages/Data").default
+  },
+  {
+    name: "Shooting",
+    path: "shooting",
+    onClick: () => {
+      message.info("coming soon");
+    }
+    // component: require("../pages/Home").default
+  },
+  {
     name: "Market",
     path: "market",
     onClick: () => {
       message.info("coming soon");
     }
     // component: require("../pages/Home").default
-  }
+  },
+  {
+    name: "Earn",
+    path: "eran",
+    onClick: () => {
+      message.info("coming soon");
+    }
+    // component: require("../pages/Home").default
+  },
+  {
+    name: "Docs",
+    path: "docs",
+    onClick: () => {
+      message.info("coming soon");
+    }
+    // component: require("../pages/Home").default
+  },
   // {
   //   name: "Page2",
   //   path: "page2",

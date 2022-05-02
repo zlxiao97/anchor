@@ -12,7 +12,7 @@ export default (props) => {
     <div className={styles.container}>
       <div>
         <Form form={props.form} layout="inline">
-          <Form.Item name="count">
+          {/* <Form.Item name="count">
             <Input
               className={styles.container__input}
               prefix={
@@ -23,14 +23,14 @@ export default (props) => {
               }
               suffix={<IconImage src={inputSuffix} onClick={props.addCount} />}
             />
-          </Form.Item>
+          </Form.Item> */}
           <Form.Item>
             <Button className={styles.container__btn} onClick={props.userMint}>
               Mint
             </Button>
           </Form.Item>
         </Form>
-        <p className={styles.container__info}>Please contact your wallet</p>
+        {/* <p className={styles.container__info}>Please contact your wallet</p> */}
       </div>
     </div>
   );

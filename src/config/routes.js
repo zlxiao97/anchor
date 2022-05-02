@@ -1,4 +1,5 @@
 import { message } from "antd";
+import { useHref } from "react-router-dom";
 
 export const homePath = "/home";
 
@@ -61,10 +62,13 @@ export default [
   {
     name: "Docs",
     path: "docs",
+    //onClick: () => {
+    //  message.info("coming soon");
+    //}
+    //component: require("../pages/Home").default
     onClick: () => {
-      message.info("coming soon");
+      window.open("https://docs.metaspace.best")
     }
-    // component: require("../pages/Home").default
   },
   // {
   //   name: "Page2",

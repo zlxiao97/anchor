@@ -46,12 +46,12 @@ export default (props) => {
             <span className={styles.statistic__label}>Number of Invitess:</span>
             <span className={styles.statistic__value}>0</span>
           </div>
-          <div className={styles.statistic__item}>
+          {/* <div className={styles.statistic__item}>
             <span className={styles.statistic__label}>Earn Expand Factor:</span>
             <span className={styles.statistic__value}>
               {Number(1).toFixed(1)}
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -7,4 +7,5 @@ export const Networks = {
   BSC: 56
 };
 
+// export const DEFAULD_NETWORK = Networks.BSCTEST;
 export const DEFAULD_NETWORK = Networks.BSC;

@@ -57,7 +57,10 @@ export default [
   {
     name: "Assets",
     path: "assets",
-    component: require("../pages/Assets").default
+    onClick: () => {
+      message.info("coming soon");
+    },
+    // component: require("../pages/Assets").default
   },
   {
     name: "Docs",

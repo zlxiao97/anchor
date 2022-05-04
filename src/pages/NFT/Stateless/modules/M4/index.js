@@ -9,27 +9,27 @@ export default (props) => {
     <div className={styles.container}>
       <div className={styles.container__item}>
         <img src={NFTBox1} />
-        <span className={styles.container__number}>
+        {/* <span className={styles.container__number}>
           number:{props.numbers[0]}
-        </span>
+        </span> */}
       </div>
       <div className={styles.container__item}>
         <img src={NFTBox2} />
-        <span className={styles.container__number}>
+        {/* <span className={styles.container__number}>
           number:{props.numbers[1]}
-        </span>
+        </span> */}
       </div>
       <div className={styles.container__item}>
         <img src={NFTBox3} />
-        <span className={styles.container__number}>
+        {/* <span className={styles.container__number}>
           number:{props.numbers[2]}
-        </span>
+        </span> */}
       </div>
       <div className={styles.container__item}>
         <img src={NFTBox4} />
-        <span className={styles.container__number}>
+        {/* <span className={styles.container__number}>
           number:{props.numbers[3]}
-        </span>
+        </span> */}
       </div>
       <div className={styles.container__border}>
         <span>SpaceShip Types</span>

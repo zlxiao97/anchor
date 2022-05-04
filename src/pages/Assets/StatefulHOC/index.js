@@ -89,6 +89,9 @@ export default (Stateless) => (props) => {
    */
   const onSubmitClick = () => {
     console.log(activationCode);
+    
+    fetch();
+
   };
 
   /**

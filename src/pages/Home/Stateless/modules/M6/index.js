@@ -123,12 +123,12 @@ export default (props) => {
                       Telegram:https://t.me/MetaSpaceNetwork
                     </a>
                   </li>
-                  <li className={styles.links__item}>
+                  {/* <li className={styles.links__item}>
                     <img src={iconSmile} alt="" />
                     <a href="http://discord.gg/fpfwyszTF4" target="_blank">
                       Discord:http://discord.gg/fpfwyszTF4
                     </a>
-                  </li>
+                  </li> */}
                   <li className={styles.links__item}>
                     <img src={iconTwitter} alt="" />
                     <a
